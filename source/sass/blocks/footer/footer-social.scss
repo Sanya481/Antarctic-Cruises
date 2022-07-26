@@ -1,0 +1,19 @@
+.footer__social {
+  align-self: end;
+}
+
+.footer__social .social__icon {
+  display: inline-block;
+
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.footer__social .social__icon-tablet {
+  display: none;
+
+  @include vp-768 {
+    display: inline-block;
+  }
+}

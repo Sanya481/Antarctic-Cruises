@@ -1,0 +1,20 @@
+.footer {
+  background: $color-tangaroa;
+  color: $color-alice-blue;
+
+  &__container {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    align-items: center;
+    padding: 50px 103px;
+
+    @include vp-768 {
+      padding: 46px 45px;
+    }
+
+    @include vp-320 {
+      display: block;
+      padding: 40px 15px;
+    }
+  }
+}

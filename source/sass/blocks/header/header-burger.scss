@@ -1,0 +1,73 @@
+.burger {
+  display: none;
+
+  @include vp-768 {
+    display: none;
+  }
+
+  @include vp-320 {
+    display: inline-block;
+    position: relative;
+    height: 12px;
+    width: 24px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+  }
+
+
+  &__menu {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background: $color-alice-blue;
+    margin: 0 auto;
+    transition: height $trans-default;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      border: none;
+      background: $color-alice-blue;
+      left: 0;
+    }
+
+    &::before {
+      top: -5px;
+      transition: top 300ms 300ms, transform $trans-header-burger;
+    }
+
+    &::after {
+      bottom: -5px;
+      transition: bottom 300ms 300ms, transform $trans-header-burger;
+    }
+  }
+}
+
+.burger.is-open {
+  height: 20px;
+}
+
+.burger__menu.is-open {
+  background: $color-transparent;
+}
+
+.burger__menu.is-open.burger__menu::before {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms, transform 300ms $trans-header-burger-2;
+  background: $color-tangaroa;
+}
+
+.burger__menu.is-open.burger__menu::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms, transform 300ms $trans-header-burger-2;
+  background: $color-tangaroa;
+}

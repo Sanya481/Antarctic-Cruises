@@ -1,0 +1,6 @@
+/* Основные стили по стилизации в файле header/logo.scss */
+.footer__logo {
+    @include vp-320 {
+    margin: 2px 0 19px;
+  }
+}

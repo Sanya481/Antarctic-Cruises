@@ -1,0 +1,48 @@
+.approval__personal-data {
+  display: inline-block;
+  position: relative;
+  padding: 3px 0px 3px 23px;
+  font-size: 10px;
+  line-height: 13px;
+  max-width: 275px;
+  cursor: pointer;
+
+  @include vp-768 {
+    max-width: 303px;
+  }
+
+  @include vp-320 {
+    max-width: 180px;
+    padding: 3px 0 3px 28px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $color-alice-blue;
+
+    @include vp-320 {
+      left: 1px;
+    }
+  }
+}
+
+.approval__checkbox:checked+.approval__personal-data::after {
+  content: '';
+  position: absolute;
+  background: url('../../../../img/svg/check-mark-modal.svg') no-repeat 0 0;
+  left: 3px;
+  width: 12px;
+  height: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include vp-320 {
+    left: 4px;
+  }
+}

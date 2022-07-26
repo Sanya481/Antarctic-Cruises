@@ -1,0 +1,17 @@
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+
+  @include vp-768 {
+    gap: 30px;
+  }
+
+  @include vp-320 {
+    display: block;
+  }
+}

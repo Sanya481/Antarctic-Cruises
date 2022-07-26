@@ -1,0 +1,19 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 37px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  @include vp-768 {
+    top: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 38px;
+  }
+}
