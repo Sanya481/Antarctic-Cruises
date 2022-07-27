@@ -1,0 +1,57 @@
+.header__logo {
+  @include vp-320 {
+    transition: right $trans-600;
+  }
+}
+
+.header__logo.is-open {
+  @include vp-320 {
+    position: relative;
+    fill: $color-tangaroa;
+    right: -40px;
+    z-index: 2;
+  }
+}
+
+.header__logo.is-open .logo__icon-tablet {
+  @include vp-320 {
+    fill: $color-tangaroa;
+  }
+}
+
+/* Общие стили с логотипом в подвале */
+.logo {
+  display: inline-block;
+  line-height: 0;
+  margin-right: 40px;
+
+  @include vp-768 {
+    margin-right: 25px;
+  }
+
+  @include vp-320 {
+    position: relative;
+    right: 0;
+  }
+
+  &__icon {
+    display: inline-block;
+
+    @include vp-768 {
+      display: none;
+    }
+  }
+
+  &__icon-tablet {
+    display: none;
+
+    @include vp-768 {
+      display: inline-block;
+      fill: $color-alice-blue;
+    }
+
+    @include vp-320 {
+      transition: fill $trans-800;
+    }
+  }
+}

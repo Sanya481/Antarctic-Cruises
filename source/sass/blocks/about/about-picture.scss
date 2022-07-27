@@ -1,0 +1,15 @@
+.about__image {
+  width: 560px;
+  height: 301px;
+  background: $white-to-right-top;
+
+  @include vp-768 {
+    width: 324px;
+    height: 264px;
+  }
+
+  @include vp-320 {
+    width: 290px;
+    height: 186px;
+  }
+}

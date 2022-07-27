@@ -1,0 +1,43 @@
+.card {
+  width: 260px;
+  position: relative;
+  cursor: pointer;
+  // background: linear-gradient(180deg, rgba(239,250,254,1) 0%, rgba(175,237,255,1) 48%, rgba(0,99,189,1) 100%);
+
+  @include vp-768 {
+    width: 309px;
+  }
+
+  @include vp-320 {
+    margin-bottom: 30px;
+    width: 270px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include vp-769 {
+  /* Разворот карточки на 180 градусов */
+  .card:hover>.card__front,
+  .card:focus>.card__front {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+
+  .card:hover>.card__info,
+  .card:focus>.card__info {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+
+@include vp-768 {
+  .card:active>.card__front {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+
+  .card:active>.card__info {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+

@@ -1,0 +1,127 @@
+.advantage-block {
+  display: flex;
+  flex-direction: column;
+  background: $color-alice-blue;
+  padding: 30px 30px 50px 30px;
+  /* ???? */
+
+  @include vp-320 {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include vp-768 {
+      line-height: 25px;
+    }
+
+    @include vp-320 {
+      max-width: 190px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  &__icon {
+    order: -1;
+    margin-bottom: 25px;
+  }
+}
+
+/* Отдельные стили для каждого пункта(блока преимуществ), чтобы попасть в Pixel perfect */
+
+//advantage-block--cruise-ship
+
+.advantage-block--cruise-ship {
+  padding: 19px 30px 28px;
+
+  @include vp-768 {
+    padding: 30px 15px 18px 20px;
+  }
+}
+
+.advantage-block--cruise-ship>.advantage-block__title {
+  margin: 0 0 8px;
+
+  // @include vp-768 {
+  //   margin: 0 0 8px;
+  // }
+}
+
+.advantage-block--cruise-ship>.advantage-block__icon {
+  margin-bottom: 19px;
+
+  @include vp-768 {
+    width: 21px;
+    height: 26px;
+    margin-bottom: 20px;
+    margin-top: -4px;
+  }
+}
+
+//advantage-block--all-inclusive
+
+.advantage-block--all-inclusive {
+  padding: 24px 30px 21px;
+
+  @include vp-768 {
+    padding: 30px 15px 18px 20px;
+  }
+}
+
+.advantage-block--all-inclusive>.advantage-block__title {
+  margin: 0 0 8px;
+}
+
+.advantage-block--all-inclusive>.advantage-block__icon {
+  @include vp-768 {
+    width: 33px;
+    height: 19px;
+    margin-bottom: 22px;
+  }
+}
+
+//advantage-block--zodiac-excursions
+
+.advantage-block--zodiac-excursions {
+  padding: 27px 30px 26px;
+
+  @include vp-768 {
+    padding: 30px 17px 18px 20px;
+  }
+}
+
+.advantage-block--zodiac-excursions>.advantage-block__title {
+  margin: 0 0 1px;
+
+  @include vp-768 {
+    margin: 0 0 8px;
+  }
+
+  @include vp-320 {
+    margin: 0 0 13px;
+  }
+}
+
+.advantage-block--zodiac-excursions>.advantage-block__icon {
+  margin-bottom: 35px;
+
+  @include vp-768 {
+    width: 38px;
+    height: 13px;
+    margin-bottom: 28px;
+  }
+}

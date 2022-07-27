@@ -21,6 +21,83 @@
 @import "blocks/btn";
 @import "blocks/modal";
 
+// Header
+// ---------------------------------
+
+@import "blocks/header/header.scss";
+@import "blocks/header/header-burger.scss";
+@import "blocks/header/nav.scss";
+@import "blocks/header/logo.scss";
+
+// Header
+// ---------------------------------
+
+@import "blocks/intro/intro.scss";
+
+
+// About
+// ---------------------------------
+
+@import "blocks/about/about.scss";
+@import "blocks/about/about-info.scss";
+@import "blocks/about/about-picture.scss";
+
+// Аdvantages
+// ---------------------------------
+
+@import "blocks/advantages/advantages.scss";
+@import "blocks/advantages/advantages-list.scss";
+@import "blocks/advantages/advantage-block.scss";
+
+// Directions
+// ---------------------------------
+
+@import "blocks/directions/directions.scss";
+@import "blocks/directions/card.scss";
+@import "blocks/directions/card-front.scss";
+@import "blocks/directions/card-back.scss";
+
+
+
+// Booking
+// ---------------------------------
+
+@import "blocks/booking/booking.scss";
+@import "blocks/booking/booking-info.scss";
+
+
+// Modal
+// ---------------------------------
+
+@import "blocks/booking/modal/modal.scss";
+@import "blocks/booking/modal/approval.scss";
+
+// Modal
+// ---------------------------------
+
+@import "blocks/contact/contact.scss";
+@import "blocks/contact/contact-map.scss";
+@import "blocks/contact/contact-text.scss";
+@import "blocks/contact/contact-list.scss";
+
+
+
+// Footer
+// ---------------------------------
+
+@import "blocks/footer/footer.scss";
+@import "blocks/footer/social.scss";
+@import "blocks/footer/footer-logo.scss";
+@import "blocks/footer/footer-social.scss";
+@import "blocks/footer/footer-nav.scss";
+
+
+
+
+
+
+
+
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

@@ -1,0 +1,98 @@
+.header__nav {
+  @include vp-320 {
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    background: $color-alice-blue;
+    top: 0;
+    right: -90%;
+    transition: right 500ms cubic-bezier(0.68, 0.55, 0.27, 1.55);
+  }
+
+  &.is-open {
+    right: 0;
+  }
+}
+
+/* Общие стили с навигацией в подвале */
+.nav {
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @include vp-320 {
+      display: block;
+      margin-top: 75px;
+      margin-left: 15px;
+    }
+  }
+
+  &__item {
+    margin: 0 34px 10px 0px;
+
+    @include vp-768 {
+      margin: 0 24px 5px 0px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include vp-320 {
+      margin: 0 0 10px 0;
+      max-width: 240px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $color-alice-blue;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px 0;
+
+    @include vp-769 {
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: $color-tangaroa;
+        transition: width $trans-600;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        content: "";
+        width: 100%;
+        left: 0;
+        background-color: $color-default-white;
+      }
+    }
+
+    &:active {
+      color: $color-turquoise-blue;
+    }
+
+    @include vp-768 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @include vp-320 {
+      display: block;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 10px;
+      color: $color-tangaroa;
+    }
+  }
+}

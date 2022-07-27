@@ -1,0 +1,42 @@
+.booking {
+  background: $color-solitude url('../../../img/background/booking-background.jpg') no-repeat 0 0;
+  background-size: cover;
+
+  @include retina {
+    background: $color-solitude url('../../../img/background/booking-background@2x.jpg') no-repeat 0 0;
+  }
+
+  @include vp-768 {
+    background: $color-solitude url('../../../img/background/booking-background-tablet.jpg') no-repeat 0 0;
+
+    @include retina {
+      background: $color-solitude url('../../../img/background/booking-background-tablet@2x.jpg') no-repeat 0 0;
+    }
+  }
+
+  @include vp-320 {
+    background: $color-solitude url('../../../img/background/booking-background-mobile.jpg') no-repeat 0 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 103px;
+
+    @include vp-1024 {
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 45px;
+    }
+
+    @include vp-768 {
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 45px;
+    }
+
+    @include vp-320 {
+      padding: 65px 15px;
+    }
+  }
+}

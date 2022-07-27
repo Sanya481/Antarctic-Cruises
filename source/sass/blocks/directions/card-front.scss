@@ -1,0 +1,43 @@
+.card {
+
+  &__front {
+    position: relative;
+    transform: perspective(600px) rotateY(0deg);
+    backface-visibility: hidden;
+    transition: transform $trans-800;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    position: absolute;
+    margin: 0;
+    color: #F9FBFD;
+    bottom: 22px;
+    left: 30px;
+
+    @include vp-768 {
+      bottom: 27px;
+      left: 35px;
+    }
+
+    @include vp-320 {
+      bottom: 18px;
+      left: 26px;
+    }
+  }
+
+  &__image {
+    width: 260px;
+    height: 386px;
+
+    @include vp-768 {
+      width: 309px;
+    }
+
+    @include vp-320 {
+      width: 270px;
+    }
+  }
+}
