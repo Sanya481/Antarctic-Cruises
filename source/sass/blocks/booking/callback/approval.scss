@@ -1,10 +1,15 @@
-.approval__personal-data {
+.approval {
+  margin-bottom: 20px;
+}
+
+.approval>label {
   display: inline-block;
   position: relative;
-  padding: 3px 0px 3px 23px;
+  padding: 3px 0 3px 23px;
   font-size: 10px;
   line-height: 13px;
   max-width: 275px;
+  vertical-align: middle;
   cursor: pointer;
 
   @include vp-768 {
@@ -17,7 +22,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 18px;
     height: 18px;
@@ -32,10 +37,10 @@
   }
 }
 
-.approval__checkbox:checked+.approval__personal-data::after {
-  content: '';
+.approval>input:checked+label::after {
+  content: "";
   position: absolute;
-  background: url('../../../../img/svg/check-mark-modal.svg') no-repeat 0 0;
+  background: url("../img/svg/check-mark-modal.svg") no-repeat 0 0;
   left: 3px;
   width: 12px;
   height: 8px;

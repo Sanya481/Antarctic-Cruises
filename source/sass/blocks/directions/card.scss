@@ -1,4 +1,4 @@
-.card {
+.directions__list>li {
   width: 260px;
   position: relative;
   cursor: pointer;
@@ -19,14 +19,15 @@
 }
 
 @include vp-769 {
+
   /* Разворот карточки на 180 градусов */
   .card:hover>.card__front,
-  .card:focus>.card__front {
+  .card:focus-within>.card__front {
     transform: perspective(600px) rotateY(-180deg);
   }
 
-  .card:hover>.card__info,
-  .card:focus>.card__info {
+  .card:hover>.card-back,
+  .card:focus-within>.card-back {
     transform: perspective(600px) rotateY(0deg);
   }
 }
@@ -36,8 +37,7 @@
     transform: perspective(600px) rotateY(-180deg);
   }
 
-  .card:active>.card__info {
+  .card:active>.card-back {
     transform: perspective(600px) rotateY(0deg);
   }
 }
-

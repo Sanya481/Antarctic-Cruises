@@ -1,6 +1,24 @@
 /* Основные стили по стилизации в файле header/logo.scss */
 .footer__logo {
-    @include vp-320 {
+  @include vp-320 {
     margin: 2px 0 19px;
+  }
+}
+
+@include vp-769 {
+
+  .footer__logo>.logo__icon:hover,
+  .footer__logo>.logo__icon:focus {
+    fill: $color-aqua;
+  }
+
+  .footer__logo>.logo__icon:active {
+    fill: $color-dodger-blue;
+  }
+}
+
+@include vp-768 {
+  .footer__logo>.logo__icon:active {
+    fill: $color-dodger-blue;
   }
 }

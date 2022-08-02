@@ -1,30 +1,87 @@
 .social {
+  line-height: 0;
   list-style: none;
   margin: 0;
   padding: 0;
 
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 
-  &__item {
-    margin-right: 20px;
+  @include vp-320 {
+    justify-content: flex-start;
+  }
+}
+
+.social__item {
+  margin: 0 20px 15px 0;
+
+  @include vp-768 {
+    margin: 0 15px 15px 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: inline-block;
+  vertical-align: middle;
+
+  &--facebook {
+    width: 11px;
+    height: 20px;
 
     @include vp-768 {
-      margin-right: 15px;
-    }
-
-    &:last-child {
-      margin-right: 0;
+      width: 9px;
+      height: 16px;
     }
   }
 
-  &__link {
-    display: inline-block;
-    line-height: 0;
-    padding: 0 3px;
+  &--instagram {
+    width: 21px;
+    height: 20px;
 
     @include vp-768 {
-      padding: 6px 3px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &--twitter {
+    width: 20px;
+    height: 17px;
+
+    @include vp-768 {
+      width: 16px;
+      height: 13px;
+    }
+  }
+}
+
+/* Иконке задаем 100% ширины и высоты, чтобы не загружать разные размеры под разные устройства, а ссылке в которую обернута svg - фактические размеры иконки */
+.social__icon {
+  width: 100%;
+  height: 100%;
+  fill: $color-alice-blue;
+
+  @include vp-769 {
+
+    &:hover,
+    &:focus {
+      fill: $deep-sky-blue;
+    }
+
+    &:active {
+      fill: $deep-dodger-blue;
+    }
+  }
+
+  @include vp-768 {
+    &:active {
+      fill: $deep-dodger-blue;
     }
   }
 }

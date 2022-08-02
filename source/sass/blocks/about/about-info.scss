@@ -13,7 +13,7 @@
   }
 }
 
-.about__title {
+.about__info > p:first-child {
   font-size: 28px;
   font-weight: 600;
   line-height: 42px;
@@ -34,7 +34,6 @@
   }
 }
 
-.about__subtitle {
-  line-height: 24px;
+.about__info > p ~ p {
   margin: 0;
 }

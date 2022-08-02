@@ -1,29 +1,26 @@
-.contact {
+.contact__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  &__title {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 27px;
-    margin: 3px 0 30px;
+  @include vp-320 {
+    display: block;
+    margin-bottom: 33px;
+    order: -1;
+  }
+}
 
-    @include vp-768 {
-      margin: 4px 0 23px;
-    }
+.contact__text>p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 3px 0 30px;
 
-    @include vp-320 {
-      margin: -6px 0 23px;
-    }
+  @include vp-768 {
+    margin: 4px 0 23px;
   }
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    @include vp-320 {
-      display: block;
-      margin-bottom: 33px;
-      order: -1;
-    }
+  @include vp-320 {
+    margin: -6px 0 23px;
   }
 }
