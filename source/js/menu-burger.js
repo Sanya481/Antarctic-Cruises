@@ -19,4 +19,16 @@ if (window.matchMedia('(max-width: 767px)').matches) {
     burgerMenu.classList.toggle('is-open');
     burger.classList.toggle('is-open');
   });
+
+
+  /* При нажатии на ссылку навигации сайта - закрываем мобильное меню и удаляем проставленные классы, чтобы меню ни мешало просмотру страницы */
+  headerNav.addEventListener('click', (evt) => {
+    if (evt.target.matches('a')) {
+      pageBody.classList.remove('scroll-lock');
+      headerLogo.classList.remove('is-open');
+      headerNav.classList.remove('is-open');
+      burgerMenu.classList.remove('is-open');
+      burger.classList.remove('is-open');
+    }
+  });
 }

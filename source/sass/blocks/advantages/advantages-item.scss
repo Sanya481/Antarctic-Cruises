@@ -1,9 +1,8 @@
-.advantage-block {
+.advantages__item {
   display: flex;
   flex-direction: column;
   background: $color-alice-blue;
   padding: 30px 30px 50px 30px;
-  /* ???? */
 
   @include vp-320 {
     margin-bottom: 30px;
@@ -12,40 +11,41 @@
       margin-bottom: 0;
     }
   }
+}
 
-  &__title {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 27px;
-    margin: 0;
-    margin-bottom: 20px;
+.advantages__item>h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 20px;
 
-    @include vp-768 {
-      line-height: 25px;
-    }
-
-    @include vp-320 {
-      max-width: 190px;
-    }
+  @include vp-768 {
+    line-height: 25px;
   }
 
-  &__subtitle {
-    font-size: 14px;
-    line-height: 20px;
-    margin: 0;
-  }
-
-  &__icon {
-    order: -1;
-    margin-bottom: 25px;
+  @include vp-320 {
+    max-width: 190px;
   }
 }
 
+.advantages__item>p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.advantages__item>svg {
+  order: -1;
+  margin-bottom: 25px;
+}
+
+
 /* Отдельные стили для каждого пункта(блока преимуществ), чтобы попасть в Pixel perfect */
 
-//advantage-block--cruise-ship
+//advantages-item--cruise-ship
 
-.advantage-block--cruise-ship {
+.advantages-item--cruise-ship {
   padding: 19px 30px 28px;
 
   @include vp-768 {
@@ -53,7 +53,7 @@
   }
 }
 
-.advantage-block--cruise-ship>.advantage-block__title {
+.advantages-item--cruise-ship>h3 {
   margin: 0 0 8px;
 
   // @include vp-768 {
@@ -61,7 +61,7 @@
   // }
 }
 
-.advantage-block--cruise-ship>.advantage-block__icon {
+.advantages-item--cruise-ship>svg {
   margin-bottom: 19px;
 
   @include vp-768 {
@@ -72,9 +72,9 @@
   }
 }
 
-//advantage-block--all-inclusive
+//advantages-item--all-inclusive
 
-.advantage-block--all-inclusive {
+.advantages-item--all-inclusive {
   padding: 24px 30px 21px;
 
   @include vp-768 {
@@ -82,11 +82,11 @@
   }
 }
 
-.advantage-block--all-inclusive>.advantage-block__title {
+.advantages-item--all-inclusive>h3 {
   margin: 0 0 8px;
 }
 
-.advantage-block--all-inclusive>.advantage-block__icon {
+.advantages-item--all-inclusive>svg {
   @include vp-768 {
     width: 33px;
     height: 19px;
@@ -94,9 +94,9 @@
   }
 }
 
-//advantage-block--zodiac-excursions
+//advantages-item--zodiac-excursions
 
-.advantage-block--zodiac-excursions {
+.advantages-item--zodiac-excursions {
   padding: 27px 30px 26px;
 
   @include vp-768 {
@@ -104,7 +104,7 @@
   }
 }
 
-.advantage-block--zodiac-excursions>.advantage-block__title {
+.advantages-item--zodiac-excursions>h3 {
   margin: 0 0 1px;
 
   @include vp-768 {
@@ -116,7 +116,7 @@
   }
 }
 
-.advantage-block--zodiac-excursions>.advantage-block__icon {
+.advantages-item--zodiac-excursions>svg {
   margin-bottom: 35px;
 
   @include vp-768 {

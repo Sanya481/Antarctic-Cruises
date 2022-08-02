@@ -9,11 +9,11 @@
   @include vp-768 {
     top: 20px;
   }
+}
 
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 38px;
-  }
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 38px;
 }
