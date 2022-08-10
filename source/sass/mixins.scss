@@ -25,6 +25,13 @@
 }
 
 // Медиа-запрос для отключения hover/focus эффектов на планшетной/мобильной версии
+@mixin vp-1023 {
+  @media (min-width: $vp-1023) {
+    @content;
+  }
+}
+
+// Медиа-запрос для отключения hover/focus эффектов на планшетной/мобильной версии
 @mixin vp-769 {
   @media (min-width: $vp-769) {
     @content;
@@ -43,8 +50,38 @@
   }
 }
 
+@mixin vp-600 {
+  @media (max-width: $vp-600) {
+    @content;
+  }
+}
+
 @mixin vp-320 {
   @media (max-width: $vp-320) {
+    @content;
+  }
+}
+
+@mixin desktop-version {
+  @media (min-width: $vp-1024) {
+    @content;
+  }
+}
+
+@mixin tablet-version {
+  @media (min-width: $vp-768) and (max-width: $vp-1023) {
+    @content;
+  }
+}
+
+@mixin mobile-version {
+  @media (min-width: $vp-320) and (max-width: $vp-767) {
+    @content;
+  }
+}
+
+@mixin mobile-tablet-version {
+  @media (min-width: $vp-320) and (max-width: $vp-1023) {
     @content;
   }
 }

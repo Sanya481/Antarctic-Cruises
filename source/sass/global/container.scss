@@ -4,9 +4,9 @@
   margin: 0 auto;
   padding: 0 103px;
 
-  @include vp-1024 {
-    max-width: 1024px;
-  }
+  // @include vp-1024 {
+  //   max-width: 1024px;
+  // }
 
   @include vp-768 {
     max-width: 768px;
