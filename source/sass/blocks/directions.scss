@@ -1,0 +1,243 @@
+.directions__container {
+  padding: 120px 50px;
+
+  @include vp-768 {
+    padding: 100px 20px;
+  }
+
+  @include vp-320 {
+    padding: 65px 15px;
+  }
+}
+
+.directions h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 55px;
+
+  @include vp-768 {
+    font-size: 26px;
+    line-height: 39px;
+    margin-top: -10px;
+    margin-bottom: 49px;
+  }
+
+  @include vp-320 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 34px;
+  }
+}
+
+.directions__list {
+  list-style: none;
+  padding: 0;
+
+  display: grid;
+  margin: 0 15px;
+  grid-template-columns: repeat(auto-fill, 260px);
+  gap: 30px;
+
+  @include tablet-version {
+    grid-template-columns: repeat(auto-fill, 309px);
+    justify-content: center;
+  }
+
+  @include mobile-version {
+    grid-template-columns: repeat(auto-fill, 270px);
+    justify-content: center;
+    // justify-items: center;
+    // display: block;
+    margin: 0 10px;
+  }
+}
+
+/* ================== card */
+
+.directions__list>li {
+  // width: 260px;
+  position: relative;
+  cursor: pointer;
+  // background: linear-gradient(180deg, rgba(239,250,254,1) 0%, rgba(175,237,255,1) 48%, rgba(0,99,189,1) 100%);
+
+  @include vp-768 {
+    // width: 309px;
+  }
+
+  @include mobile-version {
+    justify-self: center;
+    margin-bottom: 30px;
+    // width: 270px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include vp-1023 {
+
+  /* Разворот карточки на 180 градусов */
+  .card:hover>.card__front,
+  .card:focus-within>.card__front {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+
+  .card:hover>.card-back,
+  .card:focus-within>.card-back {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+
+@include vp-768 {
+  .card:active>.card__front {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+
+  .card:active>.card-back {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+
+/* ================= card__front*/
+
+.card__front {
+  position: relative;
+  transform: perspective(600px) rotateY(0deg);
+  backface-visibility: hidden;
+  transition: transform $trans-800;
+  width: 260px;
+  height: 386px;
+
+  @include tablet-version {
+    width: 309px;
+    height: 386px;
+  }
+
+  @include mobile-version {
+    width: 270px;
+  }
+}
+
+.card__front>h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  position: absolute;
+  margin: 0;
+  color: $color-alice-blue;
+  bottom: 22px;
+  left: 30px;
+
+  @include vp-768 {
+    bottom: 27px;
+    left: 35px;
+  }
+
+  @include vp-320 {
+    bottom: 18px;
+    left: 26px;
+  }
+}
+
+.card__front>img {
+  width: 100%;
+  height: 100%;
+
+  // @include vp-768 {
+  //   width: 309px;
+  // }
+
+  // @include vp-320 {
+  //   width: 270px;
+  // }
+}
+
+
+/* ======================  card-back*/
+
+.card-back {
+  background: $color-tangaroa;
+  box-shadow: 0px 4px 35px $color-tangaroa-opacity-2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 32px 25px 32px 25px;
+
+  backface-visibility: hidden;
+  transform: perspective(600px) rotateY(180deg);
+  transition: transform $trans-800;
+  overflow: auto;
+}
+
+.card-back>h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: $color-alice-blue;
+  margin: -3px 0 14px 0;
+}
+
+.card-back__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+}
+
+.card-back__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-back__item>h4 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $color-alice-blue;
+  margin: 0;
+}
+
+.card-back__item>p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-quartz;
+  margin: 0;
+}
+
+.card-back__item>p>span {
+  margin-left: 3px;
+}
+
+.card-back>a {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  background: #f9fbfd;
+  padding: 9px 20px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  transition: background $trans-default;
+
+  @include vp-1023 {
+
+    &:hover,
+    &:focus {
+      background: $color-turquoise-blue;
+    }
+  }
+
+  &:active {
+    background: $color-dodger-blue;
+  }
+}

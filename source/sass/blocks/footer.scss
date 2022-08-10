@@ -1,0 +1,190 @@
+.footer {
+  background: $color-tangaroa;
+  color: $color-alice-blue;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: min-content 1fr minmax(min-content, 100px);
+  align-items: center;
+  padding: 50px 103px;
+
+  @include vp-768 {
+    padding: 46px 45px;
+  }
+
+  @include mobile-version {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 15px;
+  }
+}
+
+/* =========== footer__logo */
+
+/* Основные стили по стилизации в файле header/logo.scss */
+.footer__logo {
+  @include vp-320 {
+    margin: 2px 0 19px;
+  }
+}
+
+@include vp-769 {
+
+  .footer__logo>.logo__icon:hover,
+  .footer__logo>.logo__icon:focus {
+    fill: $color-aqua;
+  }
+
+  .footer__logo>.logo__icon:active {
+    fill: $color-dodger-blue;
+  }
+}
+
+@include vp-768 {
+  .footer__logo>.logo__icon:active {
+    fill: $color-dodger-blue;
+  }
+}
+
+/* ================= footer__nav */
+
+.footer__nav {
+  margin-right: 40px;
+
+  @include vp-320 {
+    margin: 2px 0 19px;
+  }
+}
+
+.footer__nav>.nav__list {
+  margin: 0;
+
+  @include mobile-version {
+    display: flex;
+  }
+}
+
+.footer__nav .nav__item {
+  @include vp-768 {
+    margin: 0 24px 5px 0;
+  }
+
+  @include vp-320 {
+    margin: 0 0 8px 0;
+
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+  }
+}
+
+.footer__nav a {
+  @include vp-768 {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 10px 10px 10px 0;
+    color: $color-alice-blue;
+  }
+}
+
+
+/* ============ social */
+
+.social {
+  line-height: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @include vp-600 {
+    justify-content: center;
+  }
+
+  @include vp-320 {
+    justify-content: flex-start;
+  }
+}
+
+.social__item {
+  margin: 0 20px 15px 0;
+
+  @include vp-768 {
+    margin: 0 15px 15px 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include vp-600 {
+    &:last-child {
+      margin-right: 15px;
+    }
+  }
+}
+
+.social__link {
+  display: inline-block;
+  vertical-align: middle;
+
+  &--facebook {
+    width: 11px;
+    height: 20px;
+
+    @include vp-768 {
+      width: 9px;
+      height: 16px;
+    }
+  }
+
+  &--instagram {
+    width: 21px;
+    height: 20px;
+
+    @include vp-768 {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &--twitter {
+    width: 20px;
+    height: 17px;
+
+    @include vp-768 {
+      width: 16px;
+      height: 13px;
+    }
+  }
+}
+
+/* Иконке задаем 100% ширины и высоты, чтобы не загружать разные размеры под разные устройства, а ссылке в которую обернута svg - фактические размеры иконки */
+.social__icon {
+  width: 100%;
+  height: 100%;
+  fill: $color-alice-blue;
+
+  @include vp-769 {
+
+    &:hover,
+    &:focus {
+      fill: $deep-sky-blue;
+    }
+
+    &:active {
+      fill: $deep-dodger-blue;
+    }
+  }
+
+  @include vp-768 {
+    &:active {
+      fill: $deep-dodger-blue;
+    }
+  }
+}
