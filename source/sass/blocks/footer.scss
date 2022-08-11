@@ -5,18 +5,18 @@
 
 .footer__container {
   display: grid;
-  grid-template-columns: min-content 1fr minmax(min-content, 100px);
+  grid-template-columns: min-content 1fr minmax(min-content, 180px);
   align-items: center;
-  padding: 50px 103px;
+  padding: 50px 20px;
 
   @include vp-768 {
-    padding: 46px 45px;
+    grid-template-columns: min-content 1fr minmax(min-content, 95px);
+    padding: 50px 20px;
   }
 
-  @include mobile-version {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 40px 15px;
+  @include vp-320 {
+    display: block;
+    padding: 40px 10px;
   }
 }
 
@@ -53,21 +53,22 @@
   margin-right: 40px;
 
   @include vp-320 {
-    margin: 2px 0 19px;
+    margin: 2px 0 20px;
   }
 }
 
 .footer__nav>.nav__list {
   margin: 0;
 
-  @include mobile-version {
+  @include vp-320 {
     display: flex;
+    flex-direction: column;
   }
 }
 
 .footer__nav .nav__item {
   @include vp-768 {
-    margin: 0 24px 5px 0;
+    margin: 0 14px 5px 0;
   }
 
   @include vp-320 {
@@ -80,6 +81,8 @@
 }
 
 .footer__nav a {
+  color: $color-alice-blue;
+
   @include vp-768 {
     font-size: 12px;
     line-height: 15px;
@@ -112,10 +115,10 @@
 }
 
 .social__item {
-  margin: 0 20px 15px 0;
+  margin: 0 27px 15px 0;
 
   @include vp-768 {
-    margin: 0 15px 15px 0;
+    margin: 0 23px 15px 0;
   }
 
   &:last-child {

@@ -24,22 +24,16 @@
 .booking__container {
   display: flex;
   justify-content: space-around;
-  padding: 50px 103px;
+  padding: 50px 20px 50px;
 
   @include vp-1024 {
     flex-direction: column;
     align-items: center;
-    padding: 100px 45px;
   }
 
   @include vp-768 {
     flex-direction: column;
     align-items: center;
-    padding: 100px 25px;
-  }
-
-  @include vp-320 {
-    padding: 65px 15px;
   }
 }
 
@@ -146,14 +140,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   @include vp-768 {
-    margin: 0 0 29px;
+    margin: 0 0 24px;
   }
 
   @include vp-320 {
-    margin-bottom: 23px;
+    margin-bottom: 18px;
   }
 }
 
@@ -189,6 +183,7 @@
   cursor: pointer;
 
   @include vp-769 {
+
     &:hover,
     &:focus {
       background: $color-turquoise-blue;
@@ -265,4 +260,3 @@
     left: 4px;
   }
 }
-
