@@ -1,13 +1,5 @@
 .directions__container {
-  padding: 120px 50px;
-
-  @include vp-768 {
-    padding: 100px 20px;
-  }
-
-  @include vp-320 {
-    padding: 65px 15px;
-  }
+  padding: 116px 20px 120px;
 }
 
 .directions h2 {
@@ -52,6 +44,8 @@
     // justify-items: center;
     // display: block;
     margin: 0 10px;
+    column-gap: 30px;
+    row-gap: 0;
   }
 }
 

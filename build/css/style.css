@@ -640,9 +640,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1366px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 103px;
+  padding: 120px 20px;
 }
 
 .btn {
@@ -689,6 +689,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   min-height: 38px;
+  padding: 0 20px;
 }
 
 /* ============ header__logo */
@@ -833,7 +834,7 @@ button,
   margin-right: 0;
 }
 
-.nav__item > a {
+.header__nav a {
   position: relative;
   color: #f9fbfd;
   font-weight: 500;
@@ -841,7 +842,7 @@ button,
   padding: 5px 0;
 }
 
-.nav__item > a:active {
+.header__nav a:active {
   color: #75dfff;
 }
 
@@ -895,7 +896,6 @@ button,
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  padding: 120px 103px;
 }
 
 /* ========= about__info */
@@ -947,7 +947,7 @@ button,
 }
 
 .advantages__container {
-  padding: 111px 103px 118px;
+  padding: 112px 20px 120px;
 }
 
 h2 {
@@ -955,8 +955,7 @@ h2 {
   font-weight: 600;
   line-height: 42px;
   text-align: center;
-  margin: 0;
-  margin-bottom: 60px;
+  margin: 0 0 60px 0;
 }
 
 /* ======== advantages__list */
@@ -1041,7 +1040,7 @@ h2 {
 }
 
 .directions__container {
-  padding: 120px 50px;
+  padding: 116px 20px 120px;
 }
 
 .directions h2 {
@@ -1199,7 +1198,7 @@ h2 {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  padding: 50px 103px;
+  padding: 50px 20px 50px;
 }
 
 /* ============== booking__info */
@@ -1257,7 +1256,7 @@ h2 {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .callback__item {
@@ -1345,12 +1344,17 @@ h2 {
 }
 
 .contact__container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 100px;
-  padding: 120px 103px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 /* ========= contact__map */
@@ -1359,6 +1363,11 @@ h2 {
   line-height: 0;
   max-width: 560px;
   height: 306px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .contact__iframe {
@@ -1380,6 +1389,7 @@ h2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  max-width: 500px;
 }
 
 .contact__text > p {
@@ -1441,14 +1451,14 @@ h2 {
 .footer__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 100px);
-  -ms-grid-columns: min-content 1fr minmax(min-content, 100px);
-  grid-template-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 100px);
-  grid-template-columns: min-content 1fr minmax(min-content, 100px);
+  -ms-grid-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 180px);
+  -ms-grid-columns: min-content 1fr minmax(min-content, 180px);
+  grid-template-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 180px);
+  grid-template-columns: min-content 1fr minmax(min-content, 180px);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 50px 103px;
+  padding: 50px 20px;
 }
 
 /* =========== footer__logo */
@@ -1463,6 +1473,10 @@ h2 {
 
 .footer__nav > .nav__list {
   margin: 0;
+}
+
+.footer__nav a {
+  color: #f9fbfd;
 }
 
 /* ============ social */
@@ -1486,7 +1500,7 @@ h2 {
 }
 
 .social__item {
-  margin: 0 20px 15px 0;
+  margin: 0 27px 15px 0;
 }
 
 .social__item:last-child {
@@ -1566,7 +1580,7 @@ h2 {
 }
 
 @media (min-width: 1023px) {
-  .nav__item > a::after {
+  .header__nav a::after {
     content: "";
     display: block;
     position: absolute;
@@ -1580,8 +1594,8 @@ h2 {
     transition: width 0.6s ease;
   }
 
-  .nav__item > a:hover::after,
-  .nav__item > a:focus::after {
+  .header__nav a:hover::after,
+  .header__nav a:focus::after {
     content: "";
     width: 100%;
     left: 0;
@@ -1617,7 +1631,6 @@ h2 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 100px 45px;
   }
 
   .booking__info {
@@ -1634,12 +1647,16 @@ h2 {
 
 @media (max-width: 768px) {
   .container {
-    max-width: 768px;
-    padding: 0 45px;
+    max-width: 718px;
+    padding: 100px 20px;
   }
 
   .header {
-    top: 20px;
+    top: 26px;
+  }
+
+  .header__container {
+    padding: 0 20px;
   }
 
   .logo {
@@ -1652,7 +1669,7 @@ h2 {
     display: none;
   }
 
-  .nav__item > a {
+  .header__nav a {
     font-size: 14px;
     line-height: 17px;
   }
@@ -1685,7 +1702,7 @@ h2 {
   .about__container {
     grid-column-gap: 30px;
     grid-row-gap: 30px;
-    padding: 98px 25px 93px;
+    padding: 100px 20px 90px;
   }
 
   .about__info {
@@ -1712,12 +1729,13 @@ h2 {
   }
 
   .advantages__container {
-    padding: 90px 45px 100px;
+    padding: 90px 20px 100px;
   }
 
   h2 {
     font-size: 26px;
     line-height: 39px;
+    margin: 0;
     margin-bottom: 49px;
   }
 
@@ -1764,10 +1782,6 @@ h2 {
     margin-bottom: 28px;
   }
 
-  .directions__container {
-    padding: 100px 20px;
-  }
-
   .directions h2 {
     font-size: 26px;
     line-height: 39px;
@@ -1803,7 +1817,6 @@ h2 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 100px 25px;
   }
 
   .booking__info {
@@ -1825,7 +1838,7 @@ h2 {
   }
 
   .callback__list {
-    margin: 0 0 29px;
+    margin: 0 0 24px;
   }
 
   .approval > label {
@@ -1833,10 +1846,9 @@ h2 {
   }
 
   .contact__container {
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    padding: 100px 25px;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .contact__map {
@@ -1845,6 +1857,10 @@ h2 {
     max-width: 324px;
     height: 335px;
     margin: 0 auto;
+  }
+
+  .contact__text {
+    max-width: 324px;
   }
 
   .contact__text > p {
@@ -1863,7 +1879,11 @@ h2 {
   }
 
   .footer__container {
-    padding: 46px 45px;
+    -ms-grid-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 95px);
+    -ms-grid-columns: min-content 1fr minmax(min-content, 95px);
+    grid-template-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 95px);
+    grid-template-columns: min-content 1fr minmax(min-content, 95px);
+    padding: 50px 20px;
   }
 
   .footer__logo > .logo__icon:active {
@@ -1871,7 +1891,7 @@ h2 {
   }
 
   .footer__nav .nav__item {
-    margin: 0 24px 5px 0;
+    margin: 0 14px 5px 0;
   }
 
   .footer__nav a {
@@ -1882,7 +1902,7 @@ h2 {
   }
 
   .social__item {
-    margin: 0 15px 15px 0;
+    margin: 0 23px 15px 0;
   }
 
   .social__link--facebook {
@@ -1925,8 +1945,16 @@ h2 {
 
 @media (max-width: 320px) {
   .container {
-    max-width: 320px;
-    padding: 0 15px;
+    max-width: 310px;
+    padding: 65px 10px;
+  }
+
+  .header {
+    top: 13px;
+  }
+
+  .header__container {
+    padding: 0 10px;
   }
 
   .intro {
@@ -1941,7 +1969,6 @@ h2 {
 
   .about__container {
     display: block;
-    padding: 65px 15px;
   }
 
   .about__info {
@@ -1958,10 +1985,6 @@ h2 {
     background-size: cover;
   }
 
-  .advantages__container {
-    padding: 65px 15px;
-  }
-
   h2 {
     font-size: 24px;
     line-height: 36px;
@@ -1974,7 +1997,7 @@ h2 {
   }
 
   .advantages__item {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   .advantages__item:last-child {
@@ -1987,10 +2010,6 @@ h2 {
 
   .advantages-item--zodiac-excursions > h3 {
     margin: 0 0 13px;
-  }
-
-  .directions__container {
-    padding: 65px 15px;
   }
 
   .directions h2 {
@@ -2007,10 +2026,6 @@ h2 {
   .booking {
     background: #e3ecf6 url("../img/background/booking-background-mobile.jpg") no-repeat 0 0;
     background-size: cover;
-  }
-
-  .booking__container {
-    padding: 65px 15px;
   }
 
   .booking__info {
@@ -2044,7 +2059,7 @@ h2 {
   }
 
   .callback__list {
-    margin-bottom: 23px;
+    margin-bottom: 18px;
   }
 
   .approval > label {
@@ -2068,7 +2083,7 @@ h2 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 65px 15px;
+    gap: 0;
   }
 
   .contact__map {
@@ -2088,12 +2103,27 @@ h2 {
     margin: -6px 0 23px;
   }
 
+  .footer__container {
+    display: block;
+    padding: 40px 10px;
+  }
+
   .footer__logo {
     margin: 2px 0 19px;
   }
 
   .footer__nav {
-    margin: 2px 0 19px;
+    margin: 2px 0 20px;
+  }
+
+  .footer__nav > .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .footer__nav .nav__item {
@@ -2121,7 +2151,7 @@ h2 {
 
   .header__logo.is-open {
     position: relative;
-    left: 6%;
+    left: 14%;
     z-index: 8;
   }
 
@@ -2171,7 +2201,7 @@ h2 {
     max-width: 240px;
   }
 
-  .nav__item > a {
+  .header__nav a {
     display: block;
     font-size: 18px;
     line-height: 22px;
@@ -2240,6 +2270,7 @@ h2 {
 
   .about__picture {
     margin: 0 auto;
+    height: 186px;
   }
 
   .directions__list {
@@ -2248,6 +2279,10 @@ h2 {
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0 10px;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    row-gap: 0;
   }
 
   .directions__list > li {
@@ -2263,26 +2298,11 @@ h2 {
   .card__front {
     width: 270px;
   }
-
-  .footer__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 40px 15px;
-  }
-
-  .footer__nav > .nav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .nav__item {
-    margin: 0 20px 10px 0;
+    margin: 0 24px 10px 0;
   }
 
   .about__picture {
