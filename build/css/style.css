@@ -692,30 +692,34 @@ button,
   padding: 0 20px;
 }
 
-/* ============ header__logo */
+/* Реализация шапки без JS. Стилизация с помощью добавления класса "no-js" тегу header */
 
-/* Общие стили с логотипом в подвале */
-
-.logo {
-  display: inline-block;
-  line-height: 0;
-  width: 70px;
-  height: 38px;
-  vertical-align: middle;
-  margin: 0 40px 15px 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+.header__nav.is-open {
+  right: 0;
 }
 
-.logo__icon {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-  fill: #f9fbfd;
+.header__nav.is-open.header__nav::before {
+  content: "";
+  position: fixed;
+  width: 90%;
+  height: 70px;
+  background-color: #f9fbfd;
+  top: 0;
+  right: 0;
+  z-index: 5;
 }
 
-/* ========== header__burger */
+.header__nav a {
+  position: relative;
+  color: #f9fbfd;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 5px 0;
+}
+
+.header__nav a:active {
+  color: #75dfff;
+}
 
 .burger {
   display: none;
@@ -726,7 +730,7 @@ button,
   position: relative;
   width: 24px;
   height: 2px;
-  background: #f9fbfd;
+  background-color: #f9fbfd;
   margin: 0 auto;
   -webkit-transition: height 0.3s ease;
   -o-transition: height 0.3s ease;
@@ -740,7 +744,7 @@ button,
   width: 24px;
   height: 2px;
   border: none;
-  background: #f9fbfd;
+  background-color: #f9fbfd;
   left: 0;
 }
 
@@ -767,7 +771,7 @@ button,
 }
 
 .burger__menu.is-open {
-  background: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .burger__menu.is-open.burger__menu::before {
@@ -780,7 +784,7 @@ button,
   -o-transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
   transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
   transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55), -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
-  background: #011c40;
+  background-color: #011c40;
 }
 
 .burger__menu.is-open.burger__menu::after {
@@ -793,24 +797,28 @@ button,
   -o-transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
   transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
   transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55), -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
-  background: #011c40;
+  background-color: #011c40;
 }
 
-/* ============== nav */
+/* Общие стили с логотипом в подвале */
 
-.header__nav.is-open {
-  right: 0;
+.logo {
+  display: inline-block;
+  line-height: 0;
+  width: 70px;
+  height: 38px;
+  vertical-align: middle;
+  margin: 0 40px 15px 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
-.header__nav.is-open.header__nav::before {
-  content: "";
-  position: fixed;
-  width: 90%;
-  height: 70px;
-  background-color: #f9fbfd;
-  top: 0;
-  right: 0;
-  z-index: 5;
+.logo__icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  fill: #f9fbfd;
 }
 
 /* Общие стили с навигацией в подвале */
@@ -834,28 +842,15 @@ button,
   margin-right: 0;
 }
 
-.header__nav a {
-  position: relative;
-  color: #f9fbfd;
-  font-weight: 500;
-  line-height: 20px;
-  padding: 5px 0;
-}
-
-.header__nav a:active {
-  color: #75dfff;
-}
-
-/* Реализация шапки без JS. Стилизация с помощью добавления класса "no-js" тегу header */
-
 .intro {
   color: #f9fbfd;
-  background: url("../img/background/intro-background.jpg"), -webkit-gradient(linear, left bottom, left top, from(#effafe), color-stop(48%, #afedff), to(#0063bd)) no-repeat 0 0;
-  background: url("../img/background/intro-background.jpg"), -o-linear-gradient(bottom, #effafe 0%, #afedff 48%, #0063bd 100%) no-repeat 0 0;
-  background: url("../img/background/intro-background.jpg"), linear-gradient(0deg, #effafe 0%, #afedff 48%, #0063bd 100%) no-repeat 0 0;
+  background-image: url("../img/background/intro-background.jpg");
+  background-color: linear-gradient(0deg, #effafe 0%, #afedff 48%, #0063bd 100%);
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .intro__container {
@@ -872,7 +867,7 @@ button,
   margin-left: 96px;
 }
 
-.intro__block > h1 {
+.intro__block h1 {
   font-size: 54px;
   font-weight: 700;
   line-height: 55px;
@@ -882,7 +877,7 @@ button,
   margin-bottom: 16px;
 }
 
-.intro__block > p {
+.intro__block p {
   font-size: 20px;
   line-height: 24px;
   max-width: 900px;
@@ -898,8 +893,6 @@ button,
   grid-row-gap: 40px;
 }
 
-/* ========= about__info */
-
 .about__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -914,7 +907,7 @@ button,
   padding-right: 30px;
 }
 
-.about__info > p:first-child {
+.about__info h3 {
   font-size: 28px;
   font-weight: 600;
   line-height: 42px;
@@ -922,11 +915,9 @@ button,
   margin-bottom: 24px;
 }
 
-.about__info > p ~ p {
+.about__info p {
   margin: 0;
 }
-
-/* =========== about__picture */
 
 .about__picture {
   max-width: 560px;
@@ -937,12 +928,14 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  background: -o-linear-gradient(68deg, white 0%, #afedff 68%, #04054f 100%);
-  background: linear-gradient(22deg, white 0%, #afedff 68%, #04054f 100%);
+  background-color: linear-gradient(22deg, white 0%, #afedff 68%, #04054f 100%);
 }
 
 .advantages {
-  background: #e3ecf6 url("../../../img/background/advantages-background.png") no-repeat 0 0;
+  background-image: url("../img/background/advantages-background.png");
+  background-color: #e3ecf6;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover;
 }
 
@@ -950,15 +943,13 @@ button,
   padding: 112px 20px 120px;
 }
 
-h2 {
+.advantages h2 {
   font-size: 28px;
   font-weight: 600;
   line-height: 42px;
   text-align: center;
   margin: 0 0 60px 0;
 }
-
-/* ======== advantages__list */
 
 .advantages__list {
   margin: 0;
@@ -970,8 +961,6 @@ h2 {
   gap: 40px;
 }
 
-/* ============= advantages__item */
-
 .advantages__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -980,11 +969,11 @@ h2 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #f9fbfd;
+  background-color: #f9fbfd;
   padding: 30px 30px 50px 30px;
 }
 
-.advantages__item > h3 {
+.advantages__item h3 {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
@@ -992,13 +981,13 @@ h2 {
   margin-bottom: 20px;
 }
 
-.advantages__item > p {
+.advantages__item p {
   font-size: 14px;
   line-height: 20px;
   margin: 0;
 }
 
-.advantages__item > svg {
+.advantages__item svg {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   order: -1;
@@ -1007,35 +996,35 @@ h2 {
 
 /* Отдельные стили для каждого пункта(блока преимуществ), чтобы попасть в Pixel perfect */
 
-.advantages-item--cruise-ship {
+.advantages__item--cruise-ship {
   padding: 19px 30px 28px;
 }
 
-.advantages-item--cruise-ship > h3 {
+.advantages__item--cruise-ship h3 {
   margin: 0 0 8px;
 }
 
-.advantages-item--cruise-ship > svg {
+.advantages__item--cruise-ship svg {
   margin-bottom: 19px;
 }
 
-.advantages-item--all-inclusive {
+.advantages__item--all-inclusive {
   padding: 24px 30px 21px;
 }
 
-.advantages-item--all-inclusive > h3 {
+.advantages__item--all-inclusive h3 {
   margin: 0 0 8px;
 }
 
-.advantages-item--zodiac-excursions {
+.advantages__item--zodiac-excursions {
   padding: 27px 30px 26px;
 }
 
-.advantages-item--zodiac-excursions > h3 {
+.advantages__item--zodiac-excursions h3 {
   margin: 0 0 1px;
 }
 
-.advantages-item--zodiac-excursions > svg {
+.advantages__item--zodiac-excursions svg {
   margin-bottom: 35px;
 }
 
@@ -1058,18 +1047,15 @@ h2 {
   display: -ms-grid;
   display: grid;
   margin: 0 15px;
-  grid-template-columns: repeat(auto-fill, 260px);
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
-/* ================== card */
-
-.directions__list > li {
+.directions__list li {
   position: relative;
   cursor: pointer;
 }
-
-/* ================= card__front*/
 
 .card__front {
   position: relative;
@@ -1082,11 +1068,10 @@ h2 {
   -o-transition: transform 0.8s ease;
   transition: transform 0.8s ease;
   transition: transform 0.8s ease, -webkit-transform 0.8s ease;
-  width: 260px;
   height: 386px;
 }
 
-.card__front > h3 {
+.card__front h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -1095,19 +1080,18 @@ h2 {
   color: #f9fbfd;
   bottom: 22px;
   left: 30px;
+  right: 30px;
 }
 
-.card__front > img {
+.card__front img {
   width: 100%;
   height: 100%;
 }
 
-/* ======================  card-back*/
-
 .card-back {
-  background: #011c40;
-  -webkit-box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
-  box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+  background-color: #011c40;
+  -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   position: absolute;
   top: 0;
   left: 0;
@@ -1126,7 +1110,7 @@ h2 {
   overflow: auto;
 }
 
-.card-back > h3 {
+.card-back h3 {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
@@ -1148,7 +1132,7 @@ h2 {
   margin-bottom: 0;
 }
 
-.card-back__item > h4 {
+.card-back__item h4 {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -1156,7 +1140,7 @@ h2 {
   margin: 0;
 }
 
-.card-back__item > p {
+.card-back__item p {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -1164,31 +1148,36 @@ h2 {
   margin: 0;
 }
 
-.card-back__item > p > span {
+.card-back__item span {
   margin-left: 3px;
 }
 
-.card-back > a {
+.card-back a {
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
-  background: #f9fbfd;
+  background-color: #f9fbfd;
   padding: 9px 20px;
   width: 100%;
   text-align: center;
   vertical-align: middle;
-  -webkit-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
-  transition: background 0.3s ease;
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-.card-back > a:active {
-  background: #0d7aee;
+.card-back a:active {
+  background-color: #0d7aee;
 }
 
 .booking {
-  background: #e3ecf6 url("../img/background/booking-background.jpg") no-repeat 0 0;
+  background-image: url("../img/background/booking-background.jpg");
+  background-color: #e3ecf6;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover;
 }
 
@@ -1200,8 +1189,6 @@ h2 {
   justify-content: space-around;
   padding: 50px 20px 50px;
 }
-
-/* ============== booking__info */
 
 .booking__info {
   display: -webkit-box;
@@ -1217,7 +1204,7 @@ h2 {
   margin-right: 25px;
 }
 
-.booking__info > h2 {
+.booking__info h2 {
   font-size: 40px;
   font-weight: 700;
   line-height: 45px;
@@ -1225,7 +1212,7 @@ h2 {
   margin-bottom: 16px;
 }
 
-.booking__info > p {
+.booking__info p {
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
@@ -1233,18 +1220,16 @@ h2 {
   max-width: 380px;
 }
 
-/* ============== callback */
-
 .callback {
   max-width: 403px;
-  background: #011c40;
+  background-color: #011c40;
   color: #f9fbfd;
   padding: 45px 50px 50px 50px;
   -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
 
-.callback__form > p {
+.callback__form p {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
@@ -1259,26 +1244,7 @@ h2 {
   margin-bottom: 16px;
 }
 
-.callback__item {
-  margin-bottom: 20px;
-}
-
-.callback__item:last-child {
-  margin: 0;
-}
-
-.callback__item > label > input {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  width: 100%;
-  color: rgba(1, 28, 64, 0.7);
-  padding: 11px 50px 11px 16px;
-  border: none;
-  background-color: #f9fbfd;
-}
-
-.callback__form > button {
+.callback__form button {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -1289,24 +1255,46 @@ h2 {
   margin: 0;
   padding: 11px 40px 10px;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-.callback__form > button:active {
-  background: #0d7aee;
+.callback__form button:active {
+  background-color: #0d7aee;
 }
 
-.callback__form > button:disabled {
+.callback__form button:disabled {
   cursor: auto;
-  background: #f9fbfd;
+  background-color: #f9fbfd;
 }
 
-/* ================ approval */
+.callback__item {
+  margin-bottom: 20px;
+}
+
+.callback__item:last-child {
+  margin: 0;
+}
+
+.callback__item input {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  width: 100%;
+  color: rgba(1, 28, 64, 0.7);
+  padding: 11px 50px 11px 16px;
+  border: none;
+  background-color: #f9fbfd;
+}
 
 .approval {
   margin-bottom: 20px;
 }
 
-.approval > label {
+.approval label {
   display: inline-block;
   position: relative;
   padding: 3px 0 3px 23px;
@@ -1317,7 +1305,7 @@ h2 {
   cursor: pointer;
 }
 
-.approval > label::before {
+.approval label::before {
   content: "";
   position: absolute;
   width: 18px;
@@ -1327,13 +1315,15 @@ h2 {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: #f9fbfd;
+  background-color: #f9fbfd;
 }
 
-.approval > input:checked + label::after {
+.approval input:checked + label::after {
   content: "";
   position: absolute;
-  background: url("../img/svg/check-mark-modal.svg") no-repeat 0 0;
+  background-image: url("../img/svg/check-mark-modal.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   left: 3px;
   width: 12px;
   height: 8px;
@@ -1357,7 +1347,11 @@ h2 {
   flex-wrap: nowrap;
 }
 
-/* ========= contact__map */
+.contact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .contact__map {
   line-height: 0;
@@ -1376,8 +1370,6 @@ h2 {
   border: none;
 }
 
-/* ============= contact__text */
-
 .contact__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1392,19 +1384,11 @@ h2 {
   max-width: 500px;
 }
 
-.contact__text > p {
+.contact__text p {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
   margin: 3px 0 30px;
-}
-
-/* ============ contact__list */
-
-.contact__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .contact__item {
@@ -1420,6 +1404,9 @@ h2 {
   padding: 3px 0 3px 28px;
   display: inline-block;
   vertical-align: middle;
+  -webkit-transition: letter-spacing 0.4s ease-in-out;
+  -o-transition: letter-spacing 0.4s ease-in-out;
+  transition: letter-spacing 0.4s ease-in-out;
 }
 
 .contact__link::before {
@@ -1434,17 +1421,25 @@ h2 {
 }
 
 .contact__link--address::before {
-  background: url("../img/svg/address-marker.svg") no-repeat 0 0;
+  background-image: url("../img/svg/address-marker.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   height: 22px;
 }
 
 .contact__link--phone::before {
-  background: url("../img/svg/phone-icon.svg") no-repeat 0 0;
+  background-image: url("../img/svg/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   height: 18px;
 }
 
+.contact__link:active {
+  color: #1b0dee;
+}
+
 .footer {
-  background: #011c40;
+  background-color: #011c40;
   color: #f9fbfd;
 }
 
@@ -1461,25 +1456,29 @@ h2 {
   padding: 50px 20px;
 }
 
-/* =========== footer__logo */
+/* Основные стили по стилизации в файле logo.scss */
 
-/* Основные стили по стилизации в файле header/logo.scss */
-
-/* ================= footer__nav */
+.footer__logo .logo__icon:active {
+  fill: #0d7aee;
+}
 
 .footer__nav {
   margin-right: 40px;
 }
 
-.footer__nav > .nav__list {
+.footer__nav .nav__list {
   margin: 0;
 }
 
 .footer__nav a {
+  position: relative;
   color: #f9fbfd;
+  padding: 5px 0;
 }
 
-/* ============ social */
+.footer__nav a:active {
+  color: #75dfff;
+}
 
 .social {
   line-height: 0;
@@ -1535,6 +1534,10 @@ h2 {
   fill: #f9fbfd;
 }
 
+.social__icon:active {
+  fill: #2e80fd;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1546,36 +1549,6 @@ h2 {
   .btn:hover,
   .btn:focus {
     opacity: 0.8;
-  }
-}
-
-@media (min-width: 769px) {
-  .callback__form > button:hover,
-  .callback__form > button:focus {
-    background: #75dfff;
-  }
-
-  .callback__form > button:disabled {
-    cursor: auto;
-    background: #f9fbfd;
-  }
-
-  .footer__logo > .logo__icon:hover,
-  .footer__logo > .logo__icon:focus {
-    fill: #00e7ff;
-  }
-
-  .footer__logo > .logo__icon:active {
-    fill: #0d7aee;
-  }
-
-  .social__icon:hover,
-  .social__icon:focus {
-    fill: #00acee;
-  }
-
-  .social__icon:active {
-    fill: #2e80fd;
   }
 }
 
@@ -1604,25 +1577,83 @@ h2 {
 
   /* Разворот карточки на 180 градусов */
 
-  .card:hover > .card__front,
-  .card:focus-within > .card__front {
+  .card:hover .card__front,
+  .card:focus-within .card__front {
     -webkit-transform: perspective(600px) rotateY(-180deg);
     transform: perspective(600px) rotateY(-180deg);
   }
 
-  .card:hover > .card-back,
-  .card:focus-within > .card-back {
+  .card:hover .card-back,
+  .card:focus-within .card-back {
     -webkit-transform: perspective(600px) rotateY(0deg);
     transform: perspective(600px) rotateY(0deg);
   }
 
-  .card-back > a:hover,
-  .card-back > a:focus {
-    background: #75dfff;
+  .card-back a:hover,
+  .card-back a:focus {
+    -webkit-box-shadow: 0 0 40px 20px #75dfff;
+    box-shadow: 0 0 40px 20px #75dfff;
+  }
+
+  .callback__form button:hover,
+  .callback__form button:focus {
+    -webkit-box-shadow: 0 0 40px 40px #75dfff inset;
+    box-shadow: 0 0 40px 40px #75dfff inset;
+  }
+
+  .callback__form button:disabled {
+    cursor: auto;
+    background-color: #f9fbfd;
+  }
+
+  .contact__link:hover,
+  .contact__link:focus {
+    color: #0d7aee;
+    letter-spacing: 0.3px;
+  }
+
+  .footer__logo .logo__icon:hover,
+  .footer__logo .logo__icon:focus {
+    fill: #00e7ff;
+  }
+
+  .footer__logo .logo__icon:active {
+    fill: #0d7aee;
+  }
+
+  .footer__nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #9ab3ff;
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+  }
+
+  .footer__nav a:hover::after,
+  .footer__nav a:focus::after {
+    content: "";
+    width: 100%;
+    left: 0;
+    background-color: #ffffff;
+  }
+
+  .social__icon:hover,
+  .social__icon:focus {
+    fill: #00acee;
+  }
+
+  .social__icon:active {
+    fill: #2e80fd;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .booking__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1640,12 +1671,12 @@ h2 {
     margin: 0 0 52px 0;
   }
 
-  .booking__info > p {
+  .booking__info p {
     text-align: center;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     max-width: 718px;
     padding: 100px 20px;
@@ -1659,25 +1690,23 @@ h2 {
     padding: 0 20px;
   }
 
-  .logo {
-    margin: 0 25px 15px 0;
-    width: 38px;
-    height: 20px;
+  .header__nav a {
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .burger {
     display: none;
   }
 
-  .header__nav a {
-    font-size: 14px;
-    line-height: 17px;
+  .logo {
+    margin: 0 25px 15px 0;
+    width: 38px;
+    height: 20px;
   }
 
   .intro {
-    background: url("../img/background/intro-background-tablet.jpg"), -webkit-gradient(linear, left bottom, left top, from(#effafe), color-stop(48%, #afedff), to(#0063bd)) no-repeat 0 0;
-    background: url("../img/background/intro-background-tablet.jpg"), -o-linear-gradient(bottom, #effafe 0%, #afedff 48%, #0063bd 100%) no-repeat 0 0;
-    background: url("../img/background/intro-background-tablet.jpg"), linear-gradient(0deg, #effafe 0%, #afedff 48%, #0063bd 100%) no-repeat 0 0;
+    background-image: url("../img/background/intro-background-tablet.jpg");
   }
 
   .intro__container {
@@ -1688,13 +1717,13 @@ h2 {
     margin-left: 0;
   }
 
-  .intro__block > h1 {
+  .intro__block h1 {
     font-size: 50px;
     line-height: 40px;
     margin: 0 0 22px;
   }
 
-  .intro__block > p {
+  .intro__block p {
     font-size: 18px;
     line-height: 22px;
   }
@@ -1709,7 +1738,7 @@ h2 {
     padding-right: 0;
   }
 
-  .about__info > p:first-child {
+  .about__info h3 {
     font-size: 26px;
     line-height: 36px;
     max-width: 220px;
@@ -1724,15 +1753,14 @@ h2 {
 
   .advantages {
     min-height: 588px;
-    background: #e3ecf6 url("../../../img/background/advantages-background-tablet.png") no-repeat 0 0;
-    background-size: cover;
+    background-image: url("../img/background/advantages-background-tablet.png");
   }
 
   .advantages__container {
     padding: 90px 20px 100px;
   }
 
-  h2 {
+  .advantages h2 {
     font-size: 26px;
     line-height: 39px;
     margin: 0;
@@ -1743,40 +1771,40 @@ h2 {
     gap: 30px;
   }
 
-  .advantages__item > h3 {
+  .advantages__item h3 {
     line-height: 25px;
   }
 
-  .advantages-item--cruise-ship {
+  .advantages__item--cruise-ship {
     padding: 30px 15px 18px 20px;
   }
 
-  .advantages-item--cruise-ship > svg {
+  .advantages__item--cruise-ship svg {
     width: 21px;
     height: 26px;
     margin-bottom: 20px;
     margin-top: -4px;
   }
 
-  .advantages-item--all-inclusive {
+  .advantages__item--all-inclusive {
     padding: 30px 15px 18px 20px;
   }
 
-  .advantages-item--all-inclusive > svg {
+  .advantages__item--all-inclusive svg {
     width: 33px;
     height: 19px;
     margin-bottom: 22px;
   }
 
-  .advantages-item--zodiac-excursions {
+  .advantages__item--zodiac-excursions {
     padding: 30px 17px 18px 20px;
   }
 
-  .advantages-item--zodiac-excursions > h3 {
+  .advantages__item--zodiac-excursions h3 {
     margin: 0 0 8px;
   }
 
-  .advantages-item--zodiac-excursions > svg {
+  .advantages__item--zodiac-excursions svg {
     width: 38px;
     height: 13px;
     margin-bottom: 28px;
@@ -1789,24 +1817,23 @@ h2 {
     margin-bottom: 49px;
   }
 
-  .card:active > .card__front {
+  .card:active .card__front {
     -webkit-transform: perspective(600px) rotateY(-180deg);
     transform: perspective(600px) rotateY(-180deg);
   }
 
-  .card:active > .card-back {
+  .card:active .card-back {
     -webkit-transform: perspective(600px) rotateY(0deg);
     transform: perspective(600px) rotateY(0deg);
   }
 
-  .card__front > h3 {
+  .card__front h3 {
     bottom: 27px;
     left: 35px;
   }
 
   .booking {
-    background: #e3ecf6 url("../img/background/booking-background-tablet.jpg") no-repeat 0 0;
-    background-size: cover;
+    background-image: url("../img/background/booking-background-tablet.jpg");
   }
 
   .booking__container {
@@ -1826,14 +1853,15 @@ h2 {
     margin: 0 0 52px;
   }
 
-  .booking__info > h2 {
+  .booking__info h2 {
     font-size: 34px;
     line-height: 51px;
     margin-top: -10px;
     margin-bottom: 3px;
+    text-align: center;
   }
 
-  .booking__info > p {
+  .booking__info p {
     text-align: center;
   }
 
@@ -1841,7 +1869,7 @@ h2 {
     margin: 0 0 24px;
   }
 
-  .approval > label {
+  .approval label {
     max-width: 303px;
   }
 
@@ -1863,7 +1891,7 @@ h2 {
     max-width: 324px;
   }
 
-  .contact__text > p {
+  .contact__text p {
     margin: 4px 0 23px;
   }
 
@@ -1884,10 +1912,6 @@ h2 {
     grid-template-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 95px);
     grid-template-columns: min-content 1fr minmax(min-content, 95px);
     padding: 50px 20px;
-  }
-
-  .footer__logo > .logo__icon:active {
-    fill: #0d7aee;
   }
 
   .footer__nav .nav__item {
@@ -1919,15 +1943,19 @@ h2 {
     width: 16px;
     height: 13px;
   }
-
-  .social__icon:active {
-    fill: #2e80fd;
-  }
 }
 
-@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 768px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 768px) and (min-resolution: 2dppx) {
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
+  .intro {
+    background-image: url("../img/background/intro-background-tablet@2x.jpg");
+  }
+
+  .advantages {
+    background-image: url("../img/background/advantages-background-tablet@2x.png");
+  }
+
   .booking {
-    background: #e3ecf6 url("../img/background/booking-background-tablet@2x.jpg") no-repeat 0 0;
+    background-image: url("../img/background/booking-background-tablet@2x.jpg");
   }
 }
 
@@ -1958,9 +1986,7 @@ h2 {
   }
 
   .intro {
-    background: url("../img/background/intro-background-mobile.jpg"), -webkit-gradient(linear, left bottom, left top, from(#effafe), color-stop(48%, #afedff), to(#0063bd)) no-repeat 0 0;
-    background: url("../img/background/intro-background-mobile.jpg"), -o-linear-gradient(bottom, #effafe 0%, #afedff 48%, #0063bd 100%) no-repeat 0 0;
-    background: url("../img/background/intro-background-mobile.jpg"), linear-gradient(0deg, #effafe 0%, #afedff 48%, #0063bd 100%) no-repeat 0 0;
+    background-image: url("../img/background/intro-background-mobile.jpg");
   }
 
   .intro__container {
@@ -1975,17 +2001,16 @@ h2 {
     margin-bottom: 33px;
   }
 
-  .about__info > p:first-child {
+  .about__info h3 {
     font-size: 24px;
     line-height: 34px;
   }
 
   .advantages {
-    background: #e3ecf6 url("../../../img/background/advantages-background-mobile.png") no-repeat 0 0;
-    background-size: cover;
+    background-image: url("../img/background/advantages-background-mobile.png");
   }
 
-  h2 {
+  .advantages h2 {
     font-size: 24px;
     line-height: 36px;
     margin-top: -8px;
@@ -2004,11 +2029,11 @@ h2 {
     margin-bottom: 0;
   }
 
-  .advantages__item > h3 {
+  .advantages__item h3 {
     max-width: 190px;
   }
 
-  .advantages-item--zodiac-excursions > h3 {
+  .advantages__item--zodiac-excursions h3 {
     margin: 0 0 13px;
   }
 
@@ -2018,21 +2043,20 @@ h2 {
     margin-bottom: 34px;
   }
 
-  .card__front > h3 {
+  .card__front h3 {
     bottom: 18px;
     left: 26px;
   }
 
   .booking {
-    background: #e3ecf6 url("../img/background/booking-background-mobile.jpg") no-repeat 0 0;
-    background-size: cover;
+    background-image: url("../img/background/booking-background-mobile.jpg");
   }
 
   .booking__info {
     margin: 0 0 33px;
   }
 
-  .booking__info > h2 {
+  .booking__info h2 {
     font-size: 24px;
     line-height: 31px;
     text-align: center;
@@ -2040,7 +2064,7 @@ h2 {
     margin-top: -8px;
   }
 
-  .booking__info > p {
+  .booking__info p {
     font-size: 16px;
     line-height: 22px;
     margin: 0 10px;
@@ -2051,7 +2075,7 @@ h2 {
     padding: 40px 30px;
   }
 
-  .callback__form > p {
+  .callback__form p {
     line-height: 25px;
     text-align: center;
     margin: 0 0 28px;
@@ -2062,16 +2086,16 @@ h2 {
     margin-bottom: 18px;
   }
 
-  .approval > label {
+  .approval label {
     max-width: 180px;
     padding: 3px 0 3px 28px;
   }
 
-  .approval > label::before {
+  .approval label::before {
     left: 1px;
   }
 
-  .approval > input:checked + label::after {
+  .approval input:checked + label::after {
     left: 4px;
   }
 
@@ -2099,7 +2123,7 @@ h2 {
     order: -1;
   }
 
-  .contact__text > p {
+  .contact__text p {
     margin: -6px 0 23px;
   }
 
@@ -2116,7 +2140,7 @@ h2 {
     margin: 2px 0 20px;
   }
 
-  .footer__nav > .nav__list {
+  .footer__nav .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2141,77 +2165,21 @@ h2 {
   }
 }
 
+@media (max-width: 320px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 320px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 320px) and (min-resolution: 2dppx) {
+  .intro {
+    background-image: url("../img/background/intro-background-mobile@2x.jpg");
+  }
+
+  .advantages {
+    background-image: url("../img/background/advantages-background-mobile@2x.png");
+  }
+
+  .booking {
+    background-image: url("../img/background/booking-background-mobile@2x.jpg");
+  }
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
-  .header__logo {
-    -webkit-transition: left 0.6s ease, fill 0.8s ease;
-    -o-transition: left 0.6s ease, fill 0.8s ease;
-    transition: left 0.6s ease, fill 0.8s ease;
-    margin-bottom: 0;
-  }
-
-  .header__logo.is-open {
-    position: relative;
-    left: 14%;
-    z-index: 8;
-  }
-
-  .header__logo.is-open .logo__icon {
-    fill: #011c40;
-  }
-
-  .logo {
-    position: relative;
-    left: 0;
-  }
-
-  .burger {
-    display: inline-block;
-    position: relative;
-    height: 12px;
-    width: 24px;
-    padding: 0;
-    vertical-align: middle;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    z-index: 8;
-  }
-
-  .header__nav {
-    position: fixed;
-    width: 90%;
-    height: 100%;
-    background: #f9fbfd;
-    top: 0;
-    right: -90%;
-    -webkit-transition: right 500ms cubic-bezier(0.68, 0.55, 0.27, 1.55);
-    -o-transition: right 500ms cubic-bezier(0.68, 0.55, 0.27, 1.55);
-    transition: right 500ms cubic-bezier(0.68, 0.55, 0.27, 1.55);
-    overflow: auto;
-  }
-
-  .nav__list {
-    display: block;
-    margin-top: 75px;
-    margin-left: 15px;
-  }
-
-  .nav__item {
-    margin: 0 0 10px 0;
-    max-width: 240px;
-  }
-
-  .header__nav a {
-    display: block;
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .header__nav a {
-    color: #011c40;
-    padding: 10px;
-  }
-
   .header.no-js {
     position: static;
     margin: 20px 0 0 0;
@@ -2230,7 +2198,7 @@ h2 {
   }
 
   .header.no-js .logo__icon {
-    fill: #011C40;
+    fill: #011c40;
   }
 
   .header.no-js .header__burger {
@@ -2257,13 +2225,83 @@ h2 {
     margin: 0;
   }
 
-  .intro__block > h1 {
+  .header__logo {
+    -webkit-transition: left 0.6s ease, fill 0.8s ease;
+    -o-transition: left 0.6s ease, fill 0.8s ease;
+    transition: left 0.6s ease, fill 0.8s ease;
+    margin-bottom: 0;
+  }
+
+  .header__logo.is-open {
+    position: relative;
+    left: 14%;
+    z-index: 8;
+  }
+
+  .header__logo.is-open .logo__icon {
+    fill: #011c40;
+  }
+
+  .header__nav {
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    background-color: #f9fbfd;
+    top: 0;
+    right: -90%;
+    -webkit-transition: right 500ms cubic-bezier(0.68, 0.55, 0.27, 1.55);
+    -o-transition: right 500ms cubic-bezier(0.68, 0.55, 0.27, 1.55);
+    transition: right 500ms cubic-bezier(0.68, 0.55, 0.27, 1.55);
+    overflow: auto;
+  }
+
+  .header__nav a {
+    display: block;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .header__nav a {
+    color: #011c40;
+    padding: 10px;
+  }
+
+  .burger {
+    display: inline-block;
+    position: relative;
+    height: 12px;
+    width: 24px;
+    padding: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    z-index: 8;
+  }
+
+  .logo {
+    position: relative;
+    left: 0;
+  }
+
+  .nav__list {
+    display: block;
+    margin-top: 75px;
+    margin-left: 15px;
+  }
+
+  .nav__item {
+    margin: 0 0 10px 0;
+    max-width: 240px;
+  }
+
+  .intro__block h1 {
     font-size: 36px;
     line-height: 45px;
     margin-bottom: 10px;
   }
 
-  .intro__block > p {
+  .intro__block p {
     font-size: 16px;
     max-width: 210px;
   }
@@ -2285,18 +2323,14 @@ h2 {
     row-gap: 0;
   }
 
-  .directions__list > li {
+  .directions__list li {
     -ms-grid-column-align: center;
     justify-self: center;
     margin-bottom: 30px;
   }
 
-  .directions__list > li:last-child {
+  .directions__list li:last-child {
     margin-bottom: 0;
-  }
-
-  .card__front {
-    width: 270px;
   }
 }
 
@@ -2317,13 +2351,20 @@ h2 {
   }
 
   .card__front {
-    width: 309px;
     height: 386px;
   }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .intro {
+    background-image: url("../img/background/intro-background@2x.jpg");
+  }
+
+  .advantages {
+    background-image: url("../img/background/advantages-background@2x.png");
+  }
+
   .booking {
-    background: #e3ecf6 url("../img/background/booking-background@2x.jpg") no-repeat 0 0;
+    background-image: url("../img/background/booking-background@2x.jpg");
   }
 }

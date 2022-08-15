@@ -1,0 +1,18 @@
+.callback__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.callback__item input {
+  font-family: $ff-placeholder;
+  font-size: 14px;
+  line-height: 21px;
+  width: 100%;
+  color: $color-tangaroa-opacity;
+  padding: 11px 50px 11px 16px;
+  border: none;
+  background-color: $color-alice-blue;
+}

@@ -5,10 +5,6 @@
   flex-wrap: nowrap;
 
   @include vp-768 {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    // grid-column-gap: 30px;
-    // grid-row-gap: 30px;
     gap: 30px;
     flex-wrap: wrap;
   }
@@ -20,128 +16,8 @@
   }
 }
 
-/* ========= contact__map */
-
-.contact__map {
-  line-height: 0;
-  max-width: 560px;
-  height: 306px;
-  flex-grow: 1;
-  flex-shrink: 0;
-
-  @include vp-768 {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 324px;
-    height: 335px;
-    margin: 0 auto;
-  }
-
-  @include vp-320 {
-    max-width: 290px;
-    height: 316px;
-  }
-}
-
-.contact__iframe {
-  // width: 560px;
-  // height: 306px;
-  width: 100%;
-  height: 100%;
-  border: none;
-
-  // @include vp-768 {
-  //   width: 324px;
-  //   height: 335px;
-  // }
-
-  // @include vp-320 {
-  //   width: 290px;
-  //   height: 316px;
-  // }
-}
-
-/* ============= contact__text */
-
-.contact__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 500px;
-
-  @include vp-768 {
-    max-width: 324px;
-  }
-
-  @include vp-320 {
-    display: block;
-    margin-bottom: 33px;
-    order: -1;
-  }
-}
-
-.contact__text>p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 27px;
-  margin: 3px 0 30px;
-
-  @include vp-768 {
-    margin: 4px 0 23px;
-  }
-
-  @include vp-320 {
-    margin: -6px 0 23px;
-  }
-}
-
-/* ============ contact__list */
-
 .contact__list {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.contact__item {
-  margin-bottom: 16px;
-
-  @include vp-768 {
-    margin-bottom: 16px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.contact__link {
-  position: relative;
-  padding: 3px 0 3px 28px;
-  display: inline-block;
-  vertical-align: middle;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @include vp-768 {
-      top: 37%;
-      transform: translateY(-37%);
-    }
-  }
-
-  &--address::before {
-    background: url("../img/svg/address-marker.svg") no-repeat 0 0;
-    height: 22px;
-  }
-
-  &--phone::before {
-    background: url("../img/svg/phone-icon.svg") no-repeat 0 0;
-    height: 18px;
-  }
 }

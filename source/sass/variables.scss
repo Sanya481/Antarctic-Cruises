@@ -16,6 +16,7 @@ $deep-sky-blue:                     #00acee;
 $deep-dodger-blue:                  #2e80fd;
 $color-aqua:                        #00e7ff;
 $color-dodger-blue:                 #37a1ff;
+$color-blue:                        #1b0dee;
 
 // Background
 // ----------------------------------
@@ -32,10 +33,10 @@ $color-turquoise-blue:              #75dfff;
 
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%,rgba(0, 0, 0, 0) 75%);
-$white-to-right-top:                linear-gradient(22deg, rgba(255,255,255,1) 0%,rgba(175,237,255,1) 68%,rgba(4,5,79,1) 100%);
-$blue-to-bottom:                    linear-gradient(0deg, rgb(239, 250, 254) 0%,rgb(175, 237, 255) 48%,rgb(0, 99, 189) 100%);
-$intro-filter-bcg:                  drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$white-to-right-top:                linear-gradient(22deg, rgba(255, 255, 255, 1) 0%, rgba(175, 237, 255, 1) 68%, rgba(4, 5, 79, 1) 100%);
+$blue-to-bottom:                    linear-gradient(0deg, rgb(239, 250, 254) 0%, rgb(175, 237, 255) 48%, rgb(0, 99, 189) 100%);
+$intro-filter-bcg:                  drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
 // Typography
 // ---------------------------------
@@ -56,7 +57,7 @@ $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-callback:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-callback:                    0.6s cubic-bezier(0.55, 0, 0.1, 1);
 $trans-header-burger:               300ms cubic-bezier(0.23, 1, 0.32, 1);
 $trans-header-burger-2:             300ms cubic-bezier(0.68, -0.55, 0, 1.55);
 

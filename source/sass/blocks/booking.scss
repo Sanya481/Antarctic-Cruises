@@ -1,23 +1,29 @@
 .booking {
-  background: $color-solitude url("../img/background/booking-background.jpg") no-repeat 0 0;
+  background-image: url("../img/background/booking-background.jpg");
+  background-color: $color-solitude;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover;
 
   @include retina {
-    background: $color-solitude url("../img/background/booking-background@2x.jpg") no-repeat 0 0;
+    background-image: url("../img/background/booking-background@2x.jpg");
   }
 
   @include vp-768 {
-    background: $color-solitude url("../img/background/booking-background-tablet.jpg") no-repeat 0 0;
-    background-size: cover;
+    background-image: url("../img/background/booking-background-tablet.jpg");
+
 
     @include retina {
-      background: $color-solitude url("../img/background/booking-background-tablet@2x.jpg") no-repeat 0 0;
+      background-image: url("../img/background/booking-background-tablet@2x.jpg");
     }
   }
 
   @include vp-320 {
-    background: $color-solitude url("../img/background/booking-background-mobile.jpg") no-repeat 0 0;
-    background-size: cover;
+    background-image: url("../img/background/booking-background-mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/background/booking-background-mobile@2x.jpg");
+    }
   }
 }
 
@@ -34,229 +40,5 @@
   @include vp-768 {
     flex-direction: column;
     align-items: center;
-  }
-}
-
-/* ============== booking__info */
-
-.booking__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 25px;
-
-  @include vp-1024 {
-    align-items: center;
-    margin: 0 0 52px 0;
-  }
-
-  @include vp-768 {
-    align-items: center;
-    margin: 0 0 52px;
-  }
-
-  @include vp-320 {
-    margin: 0 0 33px;
-  }
-}
-
-.booking__info>h2 {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 45px;
-  margin: 0;
-  margin-bottom: 16px;
-
-  @include vp-768 {
-    font-size: 34px;
-    line-height: 51px;
-    margin-top: -10px;
-    margin-bottom: 3px;
-  }
-
-  @include vp-320 {
-    font-size: 24px;
-    line-height: 31px;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: -8px;
-  }
-}
-
-.booking__info>p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
-  margin: 0;
-  max-width: 380px;
-
-  @include vp-1024 {
-    text-align: center;
-  }
-
-  @include vp-768 {
-    text-align: center;
-  }
-
-  @include vp-320 {
-    font-size: 16px;
-    line-height: 22px;
-    margin: 0 10px;
-  }
-}
-
-
-/* ============== callback */
-
-.callback {
-  max-width: 403px;
-  background: $color-tangaroa;
-  color: $color-alice-blue;
-  padding: 45px 50px 50px 50px;
-  box-shadow: 0 4px 45px $color-tangaroa-opacity-2;
-
-  @include vp-320 {
-    width: 290px;
-    padding: 40px 30px;
-  }
-}
-
-.callback__form>p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 27px;
-  margin: 0;
-  margin-bottom: 27px;
-
-  @include vp-320 {
-    line-height: 25px;
-    text-align: center;
-    margin: 0 0 28px;
-    margin-top: -4px;
-  }
-}
-
-.callback__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 16px;
-
-  @include vp-768 {
-    margin: 0 0 24px;
-  }
-
-  @include vp-320 {
-    margin-bottom: 18px;
-  }
-}
-
-.callback__item {
-  margin-bottom: 20px;
-
-  &:last-child {
-    margin: 0;
-  }
-}
-
-.callback__item>label>input {
-  font-family: $ff-placeholder;
-  font-size: 14px;
-  line-height: 21px;
-  width: 100%;
-  color: $color-tangaroa-opacity;
-  padding: 11px 50px 11px 16px;
-  border: none;
-  background-color: $color-alice-blue;
-}
-
-.callback__form>button {
-  font-family: $ff-placeholder;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 21px;
-  width: 100%;
-  background-color: $color-alice-blue;
-  border: none;
-  margin: 0;
-  padding: 11px 40px 10px;
-  cursor: pointer;
-
-  @include vp-769 {
-
-    &:hover,
-    &:focus {
-      background: $color-turquoise-blue;
-    }
-
-    &:disabled {
-      cursor: auto;
-      background: $color-alice-blue;
-    }
-  }
-
-  &:active {
-    background: $color-dodger-blue;
-  }
-
-  &:disabled {
-    cursor: auto;
-    background: $color-alice-blue;
-  }
-}
-
-/* ================ approval */
-
-.approval {
-  margin-bottom: 20px;
-}
-
-.approval>label {
-  display: inline-block;
-  position: relative;
-  padding: 3px 0 3px 23px;
-  font-size: 10px;
-  line-height: 13px;
-  max-width: 275px;
-  vertical-align: middle;
-  cursor: pointer;
-
-  @include vp-768 {
-    max-width: 303px;
-  }
-
-  @include vp-320 {
-    max-width: 180px;
-    padding: 3px 0 3px 28px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: $color-alice-blue;
-
-    @include vp-320 {
-      left: 1px;
-    }
-  }
-}
-
-.approval>input:checked+label::after {
-  content: "";
-  position: absolute;
-  background: url("../img/svg/check-mark-modal.svg") no-repeat 0 0;
-  left: 3px;
-  width: 12px;
-  height: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  @include vp-320 {
-    left: 4px;
   }
 }

@@ -1,15 +1,30 @@
 .intro {
   color: $color-alice-blue;
-  background: url("../img/background/intro-background.jpg"), $blue-to-bottom no-repeat 0 0;
+  background-image: url("../img/background/intro-background.jpg");
+  background-color: $blue-to-bottom;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover;
   filter: $intro-filter-bcg;
 
+  @include retina {
+    background-image: url("../img/background/intro-background@2x.jpg");
+  }
+
   @include vp-768 {
-    background: url("../img/background/intro-background-tablet.jpg"), $blue-to-bottom no-repeat 0 0;
+    background-image: url("../img/background/intro-background-tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/background/intro-background-tablet@2x.jpg");
+    }
   }
 
   @include vp-320 {
-    background: url("../img/background/intro-background-mobile.jpg"), $blue-to-bottom no-repeat 0 0;
+    background-image: url("../img/background/intro-background-mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/background/intro-background-mobile@2x.jpg");
+    }
   }
 }
 
@@ -24,53 +39,5 @@
 
   @include vp-320 {
     min-height: 500px;
-  }
-}
-
-.intro__block {
-  margin-left: 96px;
-
-  @include vp-768 {
-    margin-left: 0;
-  }
-}
-
-.intro__block>h1 {
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 55px;
-  max-width: 1000px;
-  text-shadow: 0 4px 4px $color-black-opacity-1;
-  margin: 0;
-  margin-bottom: 16px;
-
-  @include vp-768 {
-    font-size: 50px;
-    line-height: 40px;
-    margin: 0 0 22px;
-  }
-
-  @include mobile-version {
-    font-size: 36px;
-    line-height: 45px;
-    margin-bottom: 10px;
-  }
-}
-
-.intro__block>p {
-  font-size: 20px;
-  line-height: 24px;
-  max-width: 900px;
-  text-shadow: 0 4px 4px $color-black-opacity-1;
-  margin: 0;
-
-  @include vp-768 {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  @include mobile-version {
-    font-size: 16px;
-    max-width: 210px;
   }
 }
