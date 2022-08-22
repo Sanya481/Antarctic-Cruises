@@ -5,15 +5,15 @@
   flex-grow: 1;
   flex-shrink: 0;
 
-  @include vp-768 {
+  @include tablet-version-range {
     display: inline-block;
     vertical-align: middle;
-    max-width: 324px;
+    width: 324px;
     height: 335px;
     margin: 0 auto;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     max-width: 290px;
     height: 316px;
   }

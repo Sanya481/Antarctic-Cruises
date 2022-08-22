@@ -7,8 +7,7 @@
     // width: 309px;
   }
 
-  @include mobile-version {
-    justify-self: center;
+  @include mobile-version-range {
     margin-bottom: 30px;
 
     &:last-child {

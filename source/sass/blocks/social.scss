@@ -21,8 +21,8 @@
 .social__item {
   margin: 0 27px 15px 0;
 
-  @include vp-768 {
-    margin: 0 23px 15px 0;
+  @include tablet-version-range {
+    margin: 0 18px 15px 0;
   }
 
   &:last-child {

@@ -5,16 +5,16 @@
 
 .footer__container {
   display: grid;
-  grid-template-columns: min-content 1fr minmax(min-content, 180px);
+  grid-template-columns: min-content 1fr minmax(min-content, 115px);
   align-items: center;
   padding: 50px 20px;
 
-  @include vp-768 {
-    grid-template-columns: min-content 1fr minmax(min-content, 95px);
+  @include tablet-version-range {
+    // grid-template-columns: min-content 1fr minmax(min-content, 70px);
     padding: 50px 20px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     display: block;
     padding: 40px 10px;
   }

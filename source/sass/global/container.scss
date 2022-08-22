@@ -5,15 +5,15 @@
   padding: 120px 20px;
 
   // @include vp-1024 {
-  //   max-width: 1024px;
+  //   max-width: 1023px;
   // }
 
-  @include vp-768 {
+  @include tablet-version-range {
     max-width: 718px;
     padding: 100px 20px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     max-width: 310px;
     padding: 65px 10px;
   }

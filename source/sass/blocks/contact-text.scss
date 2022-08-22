@@ -21,11 +21,11 @@
   line-height: 27px;
   margin: 3px 0 30px;
 
-  @include vp-768 {
+  @include tablet-version-range {
     margin: 4px 0 23px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     margin: -6px 0 23px;
   }
 }

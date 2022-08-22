@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include mobile-version {
+  @include mobile-version-range {
     display: block;
     margin-top: 75px;
     margin-left: 15px;
@@ -17,15 +17,15 @@
 .nav__item {
   margin: 0 34px 15px 0;
 
-  @include tablet-version {
-    margin: 0 24px 10px 0;
+  @include tablet-version-range {
+    margin: 0 15px 10px 0;
   }
 
   &:last-child {
     margin-right: 0;
   }
 
-  @include mobile-version {
+  @include mobile-version-range {
     margin: 0 0 10px 0;
     max-width: 240px;
   }

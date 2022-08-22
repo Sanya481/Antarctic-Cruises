@@ -9,15 +9,17 @@
 
   flex-shrink: 0;
 
-  @include vp-768 {
+  @include tablet-version-range {
     margin: 0 25px 15px 0;
     width: 38px;
     height: 20px;
   }
 
-  @include mobile-version {
+  @include mobile-version-range {
     position: relative;
     left: 0;
+    width: 38px;
+    height: 20px;
   }
 }
 

@@ -5,7 +5,7 @@
   transition: transform $trans-800;
   height: 386px;
 
-  @include tablet-version {
+  @include tablet-version-range {
     height: 386px;
   }
 }

@@ -4,13 +4,14 @@
   grid-column-gap: 40px;
   grid-row-gap: 40px;
 
-  @include vp-768 {
+  @include tablet-version-range {
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     padding: 100px 20px 90px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     display: block;
+    padding: 58px 10px 65px 10px;
   }
 }

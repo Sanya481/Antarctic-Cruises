@@ -1,5 +1,9 @@
 .directions__container {
   padding: 116px 20px 120px;
+
+  @include mobile-version-range {
+    padding: 58px 10px 65px;
+  }
 }
 
 .directions h2 {
@@ -10,16 +14,16 @@
   margin: 0;
   margin-bottom: 55px;
 
-  @include vp-768 {
+  @include tablet-version-range {
     font-size: 26px;
     line-height: 39px;
     margin-top: -10px;
     margin-bottom: 49px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 34px;
+    margin-bottom: 30px;
   }
 }

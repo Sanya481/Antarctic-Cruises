@@ -68,13 +68,13 @@
   }
 }
 
-@mixin tablet-version {
+@mixin tablet-version-range {
   @media (min-width: $vp-768) and (max-width: $vp-1023) {
     @content;
   }
 }
 
-@mixin mobile-version {
+@mixin mobile-version-range {
   @media (min-width: $vp-320) and (max-width: $vp-767) {
     @content;
   }

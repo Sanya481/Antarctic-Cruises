@@ -6,11 +6,11 @@
   right: 0;
   z-index: 2;
 
-  @include vp-768 {
+  @include tablet-version-range {
     top: 26px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     top: 13px;
   }
 }
@@ -22,18 +22,18 @@
   min-height: 38px;
   padding: 0 20px;
 
-  @include vp-768 {
+  @include tablet-version-range {
     padding: 0 20px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     padding: 0 10px;
   }
 }
 
 /* Реализация шапки без JS. Стилизация с помощью добавления класса "no-js" тегу header */
 
-@include mobile-version {
+@include mobile-version-range {
   .header.no-js {
     position: static;
     margin: 20px 0 0 0;
