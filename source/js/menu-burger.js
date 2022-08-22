@@ -9,6 +9,8 @@ const burger = header.querySelector('#burger');
 const burgerMenu = burger.querySelector('#burger__menu');
 // Навигация по сайту
 const headerNav = header.querySelector('#header__nav');
+// Навигация по сайту
+const introBlock = pageBody.querySelector('#intro__block');
 
 if (window.matchMedia('(max-width: 767px)').matches) {
   burger.addEventListener('click', (evt) => {
@@ -18,6 +20,8 @@ if (window.matchMedia('(max-width: 767px)').matches) {
     headerNav.classList.toggle('is-open');
     burgerMenu.classList.toggle('is-open');
     burger.classList.toggle('is-open');
+    introBlock.classList.toggle('text-opacity');
+    pageBody.classList.toggle('shadow');
   });
 
 
@@ -29,6 +33,8 @@ if (window.matchMedia('(max-width: 767px)').matches) {
       headerNav.classList.remove('is-open');
       burgerMenu.classList.remove('is-open');
       burger.classList.remove('is-open');
+      introBlock.classList.toggle('text-opacity');
+      pageBody.classList.toggle('shadow');
     }
   });
 }

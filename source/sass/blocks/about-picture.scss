@@ -6,11 +6,11 @@
     height: 264px;
   }
 
-  @include tablet-version {
+  @include tablet-version-range {
     margin: 0 auto;
   }
 
-  @include mobile-version {
+  @include mobile-version-range {
     margin: 0 auto;
     height: 186px;
   }
@@ -20,5 +20,5 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: $white-to-right-top;
+  background: $white-to-right-top;
 }

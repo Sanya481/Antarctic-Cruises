@@ -1,12 +1,12 @@
 .header__logo {
-  @include mobile-version {
+  @include mobile-version-range {
     transition: left $trans-600, fill $trans-800;
     margin-bottom: 0;
   }
 }
 
 .header__logo.is-open {
-  @include mobile-version {
+  @include mobile-version-range {
     position: relative;
     left: 14%;
     z-index: 8;
@@ -14,7 +14,7 @@
 }
 
 .header__logo.is-open .logo__icon {
-  @include mobile-version {
+  @include mobile-version-range {
     fill: $color-tangaroa;
   }
 }

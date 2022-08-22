@@ -1,7 +1,7 @@
 /* Основные стили по стилизации в файле logo.scss */
 .footer__logo {
-  @include vp-320 {
-    margin: 2px 0 19px;
+  @include mobile-version-range {
+    margin: 2px 0 21px;
   }
 }
 

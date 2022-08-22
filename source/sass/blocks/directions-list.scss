@@ -7,12 +7,12 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 
-  @include tablet-version {
+  @include tablet-version-range {
     grid-template-columns: repeat(auto-fill, 309px);
     justify-content: center;
   }
 
-  @include mobile-version {
+  @include mobile-version-range {
     grid-template-columns: repeat(auto-fill, 270px);
     justify-content: center;
     margin: 0 10px;

@@ -30,7 +30,7 @@
 .advantages__container {
   padding: 112px 20px 120px;
 
-  @include vp-768 {
+  @include tablet-version-range {
     padding: 90px 20px 100px;
   }
 }
@@ -42,14 +42,14 @@
   text-align: center;
   margin: 0 0 60px 0;
 
-  @include vp-768 {
+  @include tablet-version-range {
     font-size: 26px;
     line-height: 39px;
     margin: 0;
     margin-bottom: 49px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     font-size: 24px;
     line-height: 36px;
     margin-top: -8px;

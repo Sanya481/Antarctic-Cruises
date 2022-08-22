@@ -1,5 +1,5 @@
 .header__nav {
-  @include mobile-version {
+  @include mobile-version-range {
     position: fixed;
     width: 90%;
     height: 100%;
@@ -59,19 +59,19 @@
     color: $color-turquoise-blue;
   }
 
-  @include vp-768 {
+  @include tablet-version-range {
     font-size: 14px;
     line-height: 17px;
   }
 
-  @include mobile-version {
+  @include mobile-version-range {
     display: block;
     font-size: 18px;
     line-height: 22px;
   }
 }
 
-@include mobile-version {
+@include mobile-version-range {
   .header__nav a {
     color: $color-tangaroa;
     padding: 10px;

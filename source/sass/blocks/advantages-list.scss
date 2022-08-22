@@ -7,11 +7,11 @@
   grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
   gap: 40px;
 
-  @include vp-768 {
+  @include tablet-version-range {
     gap: 30px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     display: block;
   }
 }

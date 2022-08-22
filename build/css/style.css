@@ -638,6 +638,18 @@ button,
   transition: none !important;
 }
 
+.page-body {
+  position: relative;
+}
+
+.page-body.shadow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 43, 102, 0.5);
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -845,7 +857,7 @@ button,
 .intro {
   color: #f9fbfd;
   background-image: url("../img/background/intro-background.jpg");
-  background-color: linear-gradient(0deg, #effafe 0%, #afedff 48%, #0063bd 100%);
+  background-color: #00acee;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
@@ -865,6 +877,10 @@ button,
 
 .intro__block {
   margin-left: 96px;
+}
+
+.intro__block.text-opacity {
+  opacity: 0;
 }
 
 .intro__block h1 {
@@ -928,7 +944,8 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  background-color: linear-gradient(22deg, white 0%, #afedff 68%, #04054f 100%);
+  background: -o-linear-gradient(68deg, white 0%, #afedff 68%, #04054f 100%);
+  background: linear-gradient(22deg, white 0%, #afedff 68%, #04054f 100%);
 }
 
 .advantages {
@@ -987,11 +1004,16 @@ button,
   margin: 0;
 }
 
-.advantages__item svg {
+.advantages__item a {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   order: -1;
   margin-bottom: 25px;
+}
+
+.advantages__item svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Отдельные стили для каждого пункта(блока преимуществ), чтобы попасть в Pixel perfect */
@@ -1004,7 +1026,9 @@ button,
   margin: 0 0 8px;
 }
 
-.advantages__item--cruise-ship svg {
+.advantages__item--cruise-ship a {
+  width: 27px;
+  height: 32px;
   margin-bottom: 19px;
 }
 
@@ -1016,6 +1040,11 @@ button,
   margin: 0 0 8px;
 }
 
+.advantages__item--all-inclusive a {
+  width: 38px;
+  height: 21px;
+}
+
 .advantages__item--zodiac-excursions {
   padding: 27px 30px 26px;
 }
@@ -1024,7 +1053,9 @@ button,
   margin: 0 0 1px;
 }
 
-.advantages__item--zodiac-excursions svg {
+.advantages__item--zodiac-excursions a {
+  width: 42px;
+  height: 15px;
   margin-bottom: 35px;
 }
 
@@ -1446,10 +1477,10 @@ button,
 .footer__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 180px);
-  -ms-grid-columns: min-content 1fr minmax(min-content, 180px);
-  grid-template-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 180px);
-  grid-template-columns: min-content 1fr minmax(min-content, 180px);
+  -ms-grid-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 115px);
+  -ms-grid-columns: min-content 1fr minmax(min-content, 115px);
+  grid-template-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 115px);
+  grid-template-columns: min-content 1fr minmax(min-content, 115px);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1463,7 +1494,7 @@ button,
 }
 
 .footer__nav {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .footer__nav .nav__list {
@@ -1677,73 +1708,8 @@ button,
 }
 
 @media (max-width: 767px) {
-  .container {
-    max-width: 718px;
-    padding: 100px 20px;
-  }
-
-  .header {
-    top: 26px;
-  }
-
-  .header__container {
-    padding: 0 20px;
-  }
-
-  .header__nav a {
-    font-size: 14px;
-    line-height: 17px;
-  }
-
   .burger {
     display: none;
-  }
-
-  .logo {
-    margin: 0 25px 15px 0;
-    width: 38px;
-    height: 20px;
-  }
-
-  .intro {
-    background-image: url("../img/background/intro-background-tablet.jpg");
-  }
-
-  .intro__container {
-    min-height: 638px;
-  }
-
-  .intro__block {
-    margin-left: 0;
-  }
-
-  .intro__block h1 {
-    font-size: 50px;
-    line-height: 40px;
-    margin: 0 0 22px;
-  }
-
-  .intro__block p {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .about__container {
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    padding: 100px 20px 90px;
-  }
-
-  .about__info {
-    padding-right: 0;
-  }
-
-  .about__info h3 {
-    font-size: 26px;
-    line-height: 36px;
-    max-width: 220px;
-    margin-top: -9px;
-    margin-bottom: 16px;
   }
 
   .about__picture {
@@ -1754,67 +1720,6 @@ button,
   .advantages {
     min-height: 588px;
     background-image: url("../img/background/advantages-background-tablet.png");
-  }
-
-  .advantages__container {
-    padding: 90px 20px 100px;
-  }
-
-  .advantages h2 {
-    font-size: 26px;
-    line-height: 39px;
-    margin: 0;
-    margin-bottom: 49px;
-  }
-
-  .advantages__list {
-    gap: 30px;
-  }
-
-  .advantages__item h3 {
-    line-height: 25px;
-  }
-
-  .advantages__item--cruise-ship {
-    padding: 30px 15px 18px 20px;
-  }
-
-  .advantages__item--cruise-ship svg {
-    width: 21px;
-    height: 26px;
-    margin-bottom: 20px;
-    margin-top: -4px;
-  }
-
-  .advantages__item--all-inclusive {
-    padding: 30px 15px 18px 20px;
-  }
-
-  .advantages__item--all-inclusive svg {
-    width: 33px;
-    height: 19px;
-    margin-bottom: 22px;
-  }
-
-  .advantages__item--zodiac-excursions {
-    padding: 30px 17px 18px 20px;
-  }
-
-  .advantages__item--zodiac-excursions h3 {
-    margin: 0 0 8px;
-  }
-
-  .advantages__item--zodiac-excursions svg {
-    width: 38px;
-    height: 13px;
-    margin-bottom: 28px;
-  }
-
-  .directions h2 {
-    font-size: 26px;
-    line-height: 39px;
-    margin-top: -10px;
-    margin-bottom: 49px;
   }
 
   .card:active .card__front {
@@ -1853,14 +1758,6 @@ button,
     margin: 0 0 52px;
   }
 
-  .booking__info h2 {
-    font-size: 34px;
-    line-height: 51px;
-    margin-top: -10px;
-    margin-bottom: 3px;
-    text-align: center;
-  }
-
   .booking__info p {
     text-align: center;
   }
@@ -1879,20 +1776,8 @@ button,
     flex-wrap: wrap;
   }
 
-  .contact__map {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 324px;
-    height: 335px;
-    margin: 0 auto;
-  }
-
   .contact__text {
     max-width: 324px;
-  }
-
-  .contact__text p {
-    margin: 4px 0 23px;
   }
 
   .contact__item {
@@ -1906,27 +1791,12 @@ button,
     transform: translateY(-37%);
   }
 
-  .footer__container {
-    -ms-grid-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 95px);
-    -ms-grid-columns: min-content 1fr minmax(min-content, 95px);
-    grid-template-columns: -webkit-min-content 1fr minmax(-webkit-min-content, 95px);
-    grid-template-columns: min-content 1fr minmax(min-content, 95px);
-    padding: 50px 20px;
+  .footer__nav .nav__list {
+    display: block;
   }
 
   .footer__nav .nav__item {
     margin: 0 14px 5px 0;
-  }
-
-  .footer__nav a {
-    font-size: 12px;
-    line-height: 15px;
-    padding: 10px 10px 10px 0;
-    color: #f9fbfd;
-  }
-
-  .social__item {
-    margin: 0 23px 15px 0;
   }
 
   .social__link--facebook {
@@ -1946,10 +1816,6 @@ button,
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
-  .intro {
-    background-image: url("../img/background/intro-background-tablet@2x.jpg");
-  }
-
   .advantages {
     background-image: url("../img/background/advantages-background-tablet@2x.png");
   }
@@ -1972,75 +1838,8 @@ button,
 }
 
 @media (max-width: 320px) {
-  .container {
-    max-width: 310px;
-    padding: 65px 10px;
-  }
-
-  .header {
-    top: 13px;
-  }
-
-  .header__container {
-    padding: 0 10px;
-  }
-
-  .intro {
-    background-image: url("../img/background/intro-background-mobile.jpg");
-  }
-
-  .intro__container {
-    min-height: 500px;
-  }
-
-  .about__container {
-    display: block;
-  }
-
-  .about__info {
-    margin-bottom: 33px;
-  }
-
-  .about__info h3 {
-    font-size: 24px;
-    line-height: 34px;
-  }
-
   .advantages {
     background-image: url("../img/background/advantages-background-mobile.png");
-  }
-
-  .advantages h2 {
-    font-size: 24px;
-    line-height: 36px;
-    margin-top: -8px;
-    margin-bottom: 31px;
-  }
-
-  .advantages__list {
-    display: block;
-  }
-
-  .advantages__item {
-    margin-bottom: 31px;
-  }
-
-  .advantages__item:last-child {
-    margin-bottom: 0;
-  }
-
-  .advantages__item h3 {
-    max-width: 190px;
-  }
-
-  .advantages__item--zodiac-excursions h3 {
-    margin: 0 0 13px;
-  }
-
-  .directions h2 {
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 34px;
   }
 
   .card__front h3 {
@@ -2054,14 +1853,6 @@ button,
 
   .booking__info {
     margin: 0 0 33px;
-  }
-
-  .booking__info h2 {
-    font-size: 24px;
-    line-height: 31px;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-top: -8px;
   }
 
   .booking__info p {
@@ -2110,44 +1901,12 @@ button,
     gap: 0;
   }
 
-  .contact__map {
-    max-width: 290px;
-    height: 316px;
-  }
-
   .contact__text {
     display: block;
     margin-bottom: 33px;
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
     order: -1;
-  }
-
-  .contact__text p {
-    margin: -6px 0 23px;
-  }
-
-  .footer__container {
-    display: block;
-    padding: 40px 10px;
-  }
-
-  .footer__logo {
-    margin: 2px 0 19px;
-  }
-
-  .footer__nav {
-    margin: 2px 0 20px;
-  }
-
-  .footer__nav .nav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
 
   .footer__nav .nav__item {
@@ -2166,10 +1925,6 @@ button,
 }
 
 @media (max-width: 320px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 320px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 320px) and (min-resolution: 2dppx) {
-  .intro {
-    background-image: url("../img/background/intro-background-mobile@2x.jpg");
-  }
-
   .advantages {
     background-image: url("../img/background/advantages-background-mobile@2x.png");
   }
@@ -2179,7 +1934,204 @@ button,
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 718px;
+    padding: 100px 20px;
+  }
+
+  .header {
+    top: 26px;
+  }
+
+  .header__container {
+    padding: 0 20px;
+  }
+
+  .header__nav a {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .logo {
+    margin: 0 25px 15px 0;
+    width: 38px;
+    height: 20px;
+  }
+
+  .nav__item {
+    margin: 0 15px 10px 0;
+  }
+
+  .intro {
+    background-image: url("../img/background/intro-background-tablet.jpg");
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  .intro__container {
+    min-height: 638px;
+  }
+
+  .intro__block {
+    margin-left: 0;
+  }
+
+  .intro__block h1 {
+    font-size: 50px;
+    line-height: 40px;
+    margin: 0 0 22px;
+  }
+
+  .intro__block p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .about__container {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    padding: 100px 20px 90px;
+  }
+
+  .about__info {
+    padding-right: 0;
+  }
+
+  .about__info h3 {
+    font-size: 26px;
+    line-height: 36px;
+    max-width: 220px;
+    margin-top: -9px;
+    margin-bottom: 16px;
+  }
+
+  .about__picture {
+    margin: 0 auto;
+  }
+
+  .advantages__container {
+    padding: 90px 20px 100px;
+  }
+
+  .advantages h2 {
+    font-size: 26px;
+    line-height: 39px;
+    margin: 0;
+    margin-bottom: 49px;
+  }
+
+  .advantages__list {
+    gap: 30px;
+  }
+
+  .advantages__item h3 {
+    line-height: 25px;
+  }
+
+  .advantages__item--cruise-ship {
+    padding: 30px 15px 20px 20px;
+  }
+
+  .advantages__item--cruise-ship a {
+    width: 21px;
+    height: 26px;
+    margin-bottom: 20px;
+    margin-top: -4px;
+  }
+
+  .advantages__item--all-inclusive {
+    padding: 30px 15px 20px 20px;
+  }
+
+  .advantages__item--all-inclusive a {
+    width: 33px;
+    height: 19px;
+    margin-bottom: 22px;
+  }
+
+  .advantages__item--zodiac-excursions {
+    padding: 30px 17px 20px 20px;
+  }
+
+  .advantages__item--zodiac-excursions h3 {
+    margin: 0 0 8px;
+  }
+
+  .advantages__item--zodiac-excursions a {
+    width: 38px;
+    height: 13px;
+    margin-bottom: 28px;
+  }
+
+  .directions h2 {
+    font-size: 26px;
+    line-height: 39px;
+    margin-top: -10px;
+    margin-bottom: 49px;
+  }
+
+  .directions__list {
+    grid-template-columns: repeat(auto-fill, 309px);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .card__front {
+    height: 386px;
+  }
+
+  .booking__info h2 {
+    font-size: 34px;
+    line-height: 51px;
+    margin-top: -10px;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+
+  .contact__map {
+    display: inline-block;
+    vertical-align: middle;
+    width: 324px;
+    height: 335px;
+    margin: 0 auto;
+  }
+
+  .contact__text p {
+    margin: 4px 0 23px;
+  }
+
+  .footer__container {
+    padding: 50px 20px;
+  }
+
+  .footer__nav a {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 10px 10px 10px 0;
+    color: #f9fbfd;
+  }
+
+  .social__item {
+    margin: 0 18px 15px 0;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    max-width: 310px;
+    padding: 65px 10px;
+  }
+
+  .header {
+    top: 13px;
+  }
+
+  .header__container {
+    padding: 0 10px;
+  }
+
   .header.no-js {
     position: static;
     margin: 20px 0 0 0;
@@ -2282,6 +2234,8 @@ button,
   .logo {
     position: relative;
     left: 0;
+    width: 38px;
+    height: 20px;
   }
 
   .nav__list {
@@ -2295,6 +2249,24 @@ button,
     max-width: 240px;
   }
 
+  .intro {
+    background-image: url("../img/background/intro-background-mobile.jpg");
+    border: 1px solid #000000;
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  .intro__container {
+    min-height: 500px;
+  }
+
+  .intro__block {
+    -webkit-transition: opacity 0.6s ease;
+    -o-transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease;
+    margin-left: 0;
+  }
+
   .intro__block h1 {
     font-size: 36px;
     line-height: 45px;
@@ -2306,9 +2278,96 @@ button,
     max-width: 210px;
   }
 
+  .about__container {
+    display: block;
+    padding: 58px 10px 65px 10px;
+  }
+
+  .about__info {
+    margin-bottom: 33px;
+  }
+
+  .about__info h3 {
+    font-size: 24px;
+    line-height: 34px;
+    max-width: 210px;
+    margin: 0 0 15px;
+  }
+
   .about__picture {
     margin: 0 auto;
     height: 186px;
+  }
+
+  .advantages h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: -8px;
+    margin-bottom: 31px;
+  }
+
+  .advantages__list {
+    display: block;
+  }
+
+  .advantages__item {
+    margin-bottom: 31px;
+  }
+
+  .advantages__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .advantages__item h3 {
+    max-width: 190px;
+  }
+
+  .advantages__item--cruise-ship {
+    padding: 24px 15px 19px 20px;
+  }
+
+  .advantages__item--cruise-ship h3 {
+    margin: 0 0 6px;
+  }
+
+  .advantages__item--cruise-ship a {
+    width: 21px;
+    height: 26px;
+    margin-bottom: 18px;
+  }
+
+  .advantages__item--all-inclusive {
+    padding: 30px 15px 18px 20px;
+  }
+
+  .advantages__item--all-inclusive a {
+    width: 33px;
+    height: 19px;
+    margin-bottom: 20px;
+  }
+
+  .advantages__item--zodiac-excursions {
+    padding: 30px 17px 18px 20px;
+  }
+
+  .advantages__item--zodiac-excursions h3 {
+    margin: 0 0 8px;
+  }
+
+  .advantages__item--zodiac-excursions a {
+    width: 38px;
+    height: 13px;
+    margin-bottom: 26px;
+  }
+
+  .directions__container {
+    padding: 58px 10px 65px;
+  }
+
+  .directions h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
   }
 
   .directions__list {
@@ -2324,34 +2383,60 @@ button,
   }
 
   .directions__list li {
-    -ms-grid-column-align: center;
-    justify-self: center;
     margin-bottom: 30px;
   }
 
   .directions__list li:last-child {
     margin-bottom: 0;
   }
+
+  .booking__info h2 {
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -8px;
+  }
+
+  .contact__map {
+    max-width: 290px;
+    height: 316px;
+  }
+
+  .contact__text p {
+    margin: -6px 0 23px;
+  }
+
+  .footer__container {
+    display: block;
+    padding: 40px 10px;
+  }
+
+  .footer__logo {
+    margin: 2px 0 21px;
+  }
+
+  .footer__nav {
+    margin: 2px 0 23px;
+  }
+
+  .footer__nav a {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 10px 10px 10px 0;
+    color: #f9fbfd;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .nav__item {
-    margin: 0 24px 10px 0;
+@media (min-width: 768px) and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 768px) and (max-width: 1023px) and (min-resolution: 2dppx) {
+  .intro {
+    background-image: url("../img/background/intro-background-tablet@2x.jpg");
   }
+}
 
-  .about__picture {
-    margin: 0 auto;
-  }
-
-  .directions__list {
-    grid-template-columns: repeat(auto-fill, 309px);
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .card__front {
-    height: 386px;
+@media (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 320px) and (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 320px) and (max-width: 767px) and (min-resolution: 2dppx) {
+  .intro {
+    background-image: url("../img/background/intro-background-mobile@2x.jpg");
   }
 }
 

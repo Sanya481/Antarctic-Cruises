@@ -1,7 +1,7 @@
 .intro {
   color: $color-alice-blue;
   background-image: url("../img/background/intro-background.jpg");
-  background-color: $blue-to-bottom;
+  background-color: $deep-sky-blue;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
@@ -11,16 +11,19 @@
     background-image: url("../img/background/intro-background@2x.jpg");
   }
 
-  @include vp-768 {
+  @include tablet-version-range {
     background-image: url("../img/background/intro-background-tablet.jpg");
+    filter: none;
 
     @include retina {
       background-image: url("../img/background/intro-background-tablet@2x.jpg");
     }
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     background-image: url("../img/background/intro-background-mobile.jpg");
+    border: 1px solid $color-default-black;
+    filter: none;
 
     @include retina {
       background-image: url("../img/background/intro-background-mobile@2x.jpg");
@@ -33,11 +36,11 @@
   align-items: center;
   min-height: 650px;
 
-  @include vp-768 {
+  @include tablet-version-range {
     min-height: 638px;
   }
 
-  @include vp-320 {
+  @include mobile-version-range {
     min-height: 500px;
   }
 }
