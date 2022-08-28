@@ -42,3 +42,72 @@
     align-items: center;
   }
 }
+
+/* ============ booking__info */
+
+.booking__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 25px;
+
+  @include vp-1024 {
+    align-items: center;
+    margin: 0 0 52px 0;
+  }
+
+  @include vp-768 {
+    align-items: center;
+    margin: 0 0 52px;
+  }
+
+  @include vp-320 {
+    margin: 0 0 33px;
+  }
+}
+
+.booking__info h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 45px;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @include tablet-version-range {
+    font-size: 34px;
+    line-height: 51px;
+    margin-top: -10px;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+
+  @include mobile-version-range {
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -8px;
+  }
+}
+
+.booking__info p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  margin: 0;
+  max-width: 380px;
+
+  @include vp-1024 {
+    text-align: center;
+  }
+
+  @include vp-768 {
+    text-align: center;
+  }
+
+  @include vp-320 {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 10px;
+  }
+}

@@ -706,6 +706,10 @@ button,
 
 /* Реализация шапки без JS. Стилизация с помощью добавления класса "no-js" тегу header */
 
+/* ============ header__logo */
+
+/* ============ header__nav */
+
 .header__nav.is-open {
   right: 0;
 }
@@ -875,6 +879,8 @@ button,
   min-height: 650px;
 }
 
+/* ============ intro__block */
+
 .intro__block {
   margin-left: 96px;
 }
@@ -909,6 +915,8 @@ button,
   grid-row-gap: 40px;
 }
 
+/* ============ about__info */
+
 .about__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -934,6 +942,8 @@ button,
 .about__info p {
   margin: 0;
 }
+
+/* ============ about__picture */
 
 .about__picture {
   max-width: 560px;
@@ -968,6 +978,8 @@ button,
   margin: 0 0 60px 0;
 }
 
+/* ============ advantages__list */
+
 .advantages__list {
   margin: 0;
   padding: 0;
@@ -977,6 +989,8 @@ button,
   grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
   gap: 40px;
 }
+
+/* ============ advantages__item */
 
 .advantages__item {
   display: -webkit-box;
@@ -1072,6 +1086,8 @@ button,
   margin-bottom: 55px;
 }
 
+/* ============ directions__list */
+
 .directions__list {
   list-style: none;
   padding: 0;
@@ -1087,6 +1103,8 @@ button,
   position: relative;
   cursor: pointer;
 }
+
+/* ============ card__front */
 
 .card__front {
   position: relative;
@@ -1118,6 +1136,8 @@ button,
   width: 100%;
   height: 100%;
 }
+
+/* ============ card-back */
 
 .card-back {
   background-color: #011c40;
@@ -1221,6 +1241,8 @@ button,
   padding: 50px 20px 50px;
 }
 
+/* ============ booking__info */
+
 .booking__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1301,6 +1323,8 @@ button,
   cursor: auto;
   background-color: #f9fbfd;
 }
+
+/* ============ callback__item */
 
 .callback__item {
   margin-bottom: 20px;
@@ -1384,6 +1408,8 @@ button,
   padding: 0;
 }
 
+/* ============ contact__map */
+
 .contact__map {
   line-height: 0;
   max-width: 560px;
@@ -1400,6 +1426,8 @@ button,
   height: 100%;
   border: none;
 }
+
+/* ============ contact__text */
 
 .contact__text {
   display: -webkit-box;
@@ -1421,6 +1449,8 @@ button,
   line-height: 27px;
   margin: 3px 0 30px;
 }
+
+/* ============ contact__item  */
 
 .contact__item {
   margin-bottom: 16px;
@@ -1487,11 +1517,15 @@ button,
   padding: 50px 20px;
 }
 
+/* ============ footer__logo */
+
 /* Основные стили по стилизации в файле logo.scss */
 
 .footer__logo .logo__icon:active {
   fill: #0d7aee;
 }
+
+/* ============ footer__nav */
 
 .footer__nav {
   margin-right: 20px;
@@ -1732,11 +1766,6 @@ button,
     transform: perspective(600px) rotateY(0deg);
   }
 
-  .card__front h3 {
-    bottom: 27px;
-    left: 35px;
-  }
-
   .booking {
     background-image: url("../img/background/booking-background-tablet.jpg");
   }
@@ -1795,10 +1824,6 @@ button,
     display: block;
   }
 
-  .footer__nav .nav__item {
-    margin: 0 14px 5px 0;
-  }
-
   .social__link--facebook {
     width: 9px;
     height: 16px;
@@ -1840,11 +1865,6 @@ button,
 @media (max-width: 320px) {
   .advantages {
     background-image: url("../img/background/advantages-background-mobile.png");
-  }
-
-  .card__front h3 {
-    bottom: 18px;
-    left: 26px;
   }
 
   .booking {
@@ -1909,14 +1929,6 @@ button,
     order: -1;
   }
 
-  .footer__nav .nav__item {
-    margin: 0 0 8px 0;
-  }
-
-  .footer__nav .nav__item:last-child {
-    margin: 0 0 0 0;
-  }
-
   .social {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -1960,7 +1972,7 @@ button,
   }
 
   .nav__item {
-    margin: 0 15px 10px 0;
+    margin: 0 24px 10px 0;
   }
 
   .intro {
@@ -2082,6 +2094,11 @@ button,
     height: 386px;
   }
 
+  .card__front h3 {
+    bottom: 27px;
+    left: 35px;
+  }
+
   .booking__info h2 {
     font-size: 34px;
     line-height: 51px;
@@ -2106,6 +2123,10 @@ button,
     padding: 50px 20px;
   }
 
+  .footer__nav .nav__item {
+    margin: 0 14px 5px 0;
+  }
+
   .footer__nav a {
     font-size: 12px;
     line-height: 15px;
@@ -2125,7 +2146,7 @@ button,
   }
 
   .header {
-    top: 13px;
+    top: 15px;
   }
 
   .header__container {
@@ -2234,8 +2255,8 @@ button,
   .logo {
     position: relative;
     left: 0;
-    width: 38px;
-    height: 20px;
+    width: 42px;
+    height: 22px;
   }
 
   .nav__list {
@@ -2285,6 +2306,7 @@ button,
 
   .about__info {
     margin-bottom: 33px;
+    padding-right: 0;
   }
 
   .about__info h3 {
@@ -2390,6 +2412,11 @@ button,
     margin-bottom: 0;
   }
 
+  .card__front h3 {
+    bottom: 18px;
+    left: 26px;
+  }
+
   .booking__info h2 {
     font-size: 24px;
     line-height: 31px;
@@ -2420,11 +2447,23 @@ button,
     margin: 2px 0 23px;
   }
 
+  .footer__nav .nav__item {
+    margin: 0 0 8px 0;
+  }
+
+  .footer__nav .nav__item:last-child {
+    margin: 0 0 0 0;
+  }
+
   .footer__nav a {
     font-size: 12px;
     line-height: 15px;
     padding: 10px 10px 10px 0;
     color: #f9fbfd;
+  }
+
+  .social__item {
+    margin: 0 23px 15px 0;
   }
 }
 

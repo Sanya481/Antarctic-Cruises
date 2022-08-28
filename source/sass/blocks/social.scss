@@ -25,6 +25,10 @@
     margin: 0 18px 15px 0;
   }
 
+  @include mobile-version-range {
+    margin: 0 23px 15px 0;
+  }
+
   &:last-child {
     margin-right: 0;
   }
