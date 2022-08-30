@@ -11,6 +11,7 @@
   max-width: 275px;
   vertical-align: middle;
   cursor: pointer;
+  transition: $trans-default;
 
   @include vp-768 {
     max-width: 303px;
@@ -35,9 +36,13 @@
       left: 1px;
     }
   }
+
+  &:active {
+    color: $color-aqua;
+  }
 }
 
-.approval input:checked + label::after {
+.approval input:checked+label::after {
   content: "";
   position: absolute;
   background-image: url("../img/svg/check-mark-modal.svg");
@@ -51,5 +56,12 @@
 
   @include vp-320 {
     left: 4px;
+  }
+}
+
+@include effects-off {
+  .approval input:hover+label,
+  .approval input:focus+label {
+    color: $color-turquoise-blue;
   }
 }

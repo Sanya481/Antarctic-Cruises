@@ -30,3 +30,7 @@
     max-width: 240px;
   }
 }
+
+.nav__item a {
+  user-select: none;
+}
