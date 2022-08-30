@@ -105,6 +105,7 @@
   display: inline-block;
   vertical-align: middle;
   transition: letter-spacing 0.4s ease-in-out;
+  user-select: none;
 
   &::before {
     content: "";

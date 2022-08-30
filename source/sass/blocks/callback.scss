@@ -53,6 +53,7 @@
   padding: 11px 40px 10px;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  user-select: none;
 
   @include effects-off {
     &:hover,
@@ -80,6 +81,7 @@
 
 .callback__item {
   margin-bottom: 20px;
+  user-select: none;
 
   &:last-child {
     margin: 0;
@@ -91,8 +93,23 @@
   font-size: 14px;
   line-height: 21px;
   width: 100%;
-  color: $color-tangaroa-opacity;
+  color: $color-default-black;
   padding: 11px 50px 11px 16px;
   border: none;
   background-color: $color-alice-blue;
+
+  @include effects-off {
+    &:hover,
+    &:focus {
+      outline: 2px solid $color-blue;
+    }
+  }
+
+  &:active {
+    outline: 2px solid $color-blue;
+  }
+}
+
+.callback__item input::placeholder {
+  color: $color-tangaroa-opacity;
 }
