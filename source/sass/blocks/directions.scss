@@ -52,3 +52,16 @@
     row-gap: 0;
   }
 }
+
+.directions__list li {
+  position: relative;
+  cursor: pointer;
+
+  @include mobile-version-range {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
