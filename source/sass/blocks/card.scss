@@ -11,12 +11,12 @@
   }
 }
 
-@include vp-768 {
-  .card:active .card__front {
+@include vp-1024 {
+  .card.rotation .card__front {
     transform: perspective(600px) rotateY(-180deg);
   }
 
-  .card:active .card-back {
+  .card.rotation .card-back {
     transform: perspective(600px) rotateY(0deg);
   }
 }
@@ -29,6 +29,7 @@
   backface-visibility: hidden;
   transition: transform $trans-800;
   height: 386px;
+  overflow: hidden;
 
   @include tablet-version-range {
     height: 386px;

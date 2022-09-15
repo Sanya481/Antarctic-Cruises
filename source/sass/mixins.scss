@@ -26,7 +26,7 @@
 
 // Медиа-запрос для отключения hover/focus эффектов на планшетной/мобильной версии
 @mixin effects-off {
-  @media (min-width: $vp-1023) {
+  @media (min-width: $vp-1024) {
     @content;
   }
 }

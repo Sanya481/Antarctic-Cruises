@@ -14,7 +14,7 @@
 
 <body class="page-body">
 
-  <header class="header" id="header">
+  <header class="header no-js" id="header">
     <div class="header__container container">
 
       <a class="header__logo logo" id="header__logo">
@@ -126,7 +126,7 @@
     <section class="directions" id="directions">
       <div class="directions__container container">
         <h2>Ближайшие круизы</h2>
-        <ul class="directions__list">
+        <ul class="directions__list" id="directions__list">
           <li class="directions__item card">
 
             <div class="card__front">
@@ -134,7 +134,7 @@
               <picture>
                 <!--  Размеры изображения 1х: 260 * 386; 2x: 520 * 772; -->
                 <!-- webp - 1x, 2x -->
-                <source type="img/webp" srcset="img/directions/astoria.webp, img/directions/astoria@2x.webp 2x">
+                <source type="img/webp" srcset="img/directions/astoria.webp 1x, img/directions/astoria@2x.webp 2x">
                 <!-- jpg - 1x, 2x -->
                 <img src="img/directions/astoria.jpg" srcset="img/directions/astoria@2x.jpg 2x" width="270" height="386"
                   alt="Замерзщее озеро с заснежненной горой на горизонте">
@@ -576,3 +576,5 @@
 </body>
 
 </html>
+
+
