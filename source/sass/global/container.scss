@@ -11,12 +11,12 @@
   @include tablet-version-range {
     // max-width: 718px;
     max-width: 1023px;
-    padding: 100px 20px;
+    padding: 100px 45px;
   }
 
   @include mobile-version-range {
     // max-width: 310px;
     max-width: 767px;
-    padding: 65px 10px;
+    padding: 65px 15px;
   }
 }

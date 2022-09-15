@@ -8,8 +8,8 @@
   @include mobile-version-range {
     display: inline-block;
     position: relative;
-    height: 12px;
-    width: 24px;
+    height: 27px;
+    width: 32px;
     padding: 0;
     vertical-align: middle;
     cursor: pointer;
@@ -51,7 +51,7 @@
 }
 
 .burger.is-open {
-  height: 20px;
+  height: 27px;
 }
 
 .burger__menu.is-open {
