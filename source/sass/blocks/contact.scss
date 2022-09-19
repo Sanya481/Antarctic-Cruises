@@ -115,9 +115,13 @@
     top: 50%;
     transform: translateY(-50%);
 
-    @include vp-768 {
-      top: 37%;
-      transform: translateY(-37%);
+    @include tablet-version-range {
+      top: 33%;
+      transform: translateY(-33%);
+    }
+
+    @include mobile-version-range {
+      top: 41%;
     }
   }
 

@@ -1,5 +1,13 @@
 .approval {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
+
+  @include tablet-version-range {
+    margin-bottom: 30px;
+  }
+
+  @include mobile-version-range {
+    margin-bottom: 23px;
+  }
 }
 
 .approval label {
@@ -13,7 +21,7 @@
   cursor: pointer;
   transition: $trans-default;
 
-  @include vp-768 {
+  @include tablet-version-range {
     max-width: 303px;
   }
 
@@ -33,7 +41,8 @@
     background-color: $color-alice-blue;
 
     @include vp-320 {
-      left: 1px;
+      left: 2px;
+      top: 46%;
     }
   }
 
@@ -42,7 +51,7 @@
   }
 }
 
-.approval input:checked+label::after {
+.approval input:checked + label::after {
   content: "";
   position: absolute;
   background-image: url("../img/svg/check-mark-modal.svg");
@@ -60,8 +69,8 @@
 }
 
 @include effects-off {
-  .approval input:hover+label,
-  .approval input:focus+label {
+  .approval input:hover + label,
+  .approval input:focus + label {
     color: $color-turquoise-blue;
   }
 }

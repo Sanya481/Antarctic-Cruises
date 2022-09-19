@@ -40,7 +40,7 @@
   font-weight: 600;
   line-height: 42px;
   text-align: center;
-  margin: 0 0 60px 0;
+  margin: 0 0 51px 0;
 
   @include tablet-version-range {
     font-size: 26px;
@@ -84,6 +84,7 @@
   flex-direction: column;
   background-color: $color-alice-blue;
   padding: 30px 30px 50px 30px;
+  min-height: 241px;
 
   @include mobile-version-range {
     margin-bottom: 31px;
@@ -131,7 +132,7 @@
 //advantages__item--cruise-ship
 
 .advantages__item--cruise-ship {
-  padding: 19px 30px 28px;
+  padding: 28px 30px 28px;
 
   @include tablet-version-range {
     padding: 30px 15px 20px 20px;
@@ -172,7 +173,7 @@
 //advantages__item--all-inclusive
 
 .advantages__item--all-inclusive {
-  padding: 24px 30px 21px;
+  padding: 32px 30px 21px;
 
   @include tablet-version-range {
     padding: 30px 15px 20px 20px;
@@ -207,7 +208,7 @@
 //advantages__item--zodiac-excursions
 
 .advantages__item--zodiac-excursions {
-  padding: 27px 30px 26px;
+  padding: 36px 30px 26px;
 
   @include tablet-version-range {
     padding: 30px 17px 20px 20px;
