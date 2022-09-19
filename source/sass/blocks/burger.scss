@@ -48,6 +48,10 @@
     bottom: -5px;
     transition: bottom 300ms 300ms, transform $trans-header-burger;
   }
+
+  @include mobile-version-range {
+    margin-left: 9px;
+  }
 }
 
 .burger.is-open {

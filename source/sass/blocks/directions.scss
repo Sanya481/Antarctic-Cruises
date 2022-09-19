@@ -12,7 +12,7 @@
   line-height: 27px;
   text-align: center;
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 56px;
 
   @include tablet-version-range {
     font-size: 26px;
@@ -53,7 +53,7 @@
   }
 }
 
-.directions__list li {
+.directions__item {
   position: relative;
   cursor: pointer;
 

@@ -43,16 +43,18 @@
   position: absolute;
   margin: 0;
   color: $color-alice-blue;
-  bottom: 22px;
+  bottom: 20px;
   left: 30px;
   right: 30px;
 
   @include tablet-version-range {
+    pointer-events: none;
     bottom: 27px;
     left: 35px;
   }
 
   @include mobile-version-range {
+    pointer-events: none;
     bottom: 18px;
     left: 26px;
   }
