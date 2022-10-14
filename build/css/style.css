@@ -2393,7 +2393,6 @@ main {
 
   .intro {
     background-image: url("../img/background/intro-background-mobile.jpg");
-    border: 1px solid #000000;
     -webkit-filter: none;
     filter: none;
   }
