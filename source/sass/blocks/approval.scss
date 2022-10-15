@@ -40,6 +40,9 @@
     transform: translateY(-50%);
     background-color: $color-alice-blue;
 
+    transition: background-color $trans-600;
+
+
     @include vp-320 {
       left: 2px;
       top: 46%;

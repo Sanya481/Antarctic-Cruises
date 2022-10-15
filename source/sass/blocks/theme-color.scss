@@ -1,0 +1,41 @@
+.theme-color {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  @include tablet-version-range {
+    gap: 2px;
+  }
+
+  @include mobile-version-range {
+    justify-content: center;
+  }
+}
+
+.theme-color__light {
+  fill: #ffab9b;
+
+  @include tablet-version-range {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include mobile-version-range {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.theme-color__dark {
+  fill: #acc7f3;
+
+  @include tablet-version-range {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include mobile-version-range {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -631,26 +631,6 @@ main {
   transition: none !important;
 }
 
-.page-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 100%;
-  position: relative;
-}
-
-.page-body.shadow::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 43, 102, 0.5);
-}
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -682,6 +662,125 @@ main {
   pointer-events: none;
 }
 
+.page-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  -webkit-transition: background-color 0.6s ease, color 0.6s ease;
+  -o-transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.page-body.shadow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 43, 102, 0.5);
+}
+
+.page-body.dark-mode {
+  background-color: #1D1F20;
+  color: #EFFEFF;
+}
+
+/* Фон header */
+
+/* Подложка у header */
+
+/* Крестик */
+
+/* Лого */
+
+/* Ссылки навигации */
+
+.advantages.dark-mode {
+  background-color: #2D3843;
+}
+
+.advantages.dark-mode h2 {
+  color: #EFFEFF;
+}
+
+.advantages.dark-mode .advantages__item {
+  background-color: #1D1F20;
+  color: #EFFEFF;
+}
+
+.advantages.dark-mode svg {
+  fill: #EFFEFF;
+}
+
+.booking.dark-mode {
+  color: #001332;
+}
+
+.callback.dark-mode input {
+  background-color: #1D1F20;
+  color: #EFFEFF;
+}
+
+.callback.dark-mode input::-webkit-input-placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode input::-moz-placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode input:-ms-input-placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode input::-ms-input-placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode input::placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode button {
+  background-color: #1D1F20;
+  color: #EFFEFF;
+}
+
+.approval.dark-mode label::before {
+  background-color: #1D1F20;
+}
+
+.approval.dark-mode input:checked + label::after {
+  background-image: url("../img/svg/check-mark-modal-white.svg");
+}
+
+.contact.dark-mode .contact__link {
+  color: #EFFEFF;
+}
+
+.contact.dark-mode .contact__link:active {
+  color: #1b0dee;
+}
+
+.contact.dark-mode .contact__link--address::before {
+  background-image: url("../img/svg/address-marker-white.svg");
+  background-repeat: no-repeat;
+}
+
+.contact.dark-mode .contact__link--phone::before {
+  background-image: url("../img/svg/phone-icon-white.svg");
+  background-repeat: no-repeat;
+}
+
+.footer.dark-mode {
+  background-color: #182346;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -703,6 +802,15 @@ main {
   align-items: center;
   min-height: 38px;
   padding: 0 20px;
+}
+
+.header__left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 /* Реализация шапки без JS. Стилизация с помощью добавления класса "no-js" тегу header */
@@ -825,7 +933,7 @@ main {
   width: 70px;
   height: 38px;
   vertical-align: middle;
-  margin: 0 40px 15px 0;
+  margin: 0 40px 0 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -849,14 +957,7 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
-
-.nav__item {
-  margin: 0 34px 15px 0;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
+  gap: 15px 34px;
 }
 
 .nav__item a {
@@ -864,6 +965,83 @@ main {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.switcher {
+  margin: 0;
+}
+
+.switcher label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 25px;
+}
+
+.switcher input {
+  opacity: 0;
+}
+
+.switcher__round {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: #269ce9;
+  -webkit-box-shadow: -5px -5px 8px rgba(255, 255, 255, 0.2), 5px 5px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: -5px -5px 8px rgba(255, 255, 255, 0.2), 5px 5px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.switcher__round::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  border-radius: 50px;
+  left: 4px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.switcher input:checked + .switcher__round {
+  background-color: #221515;
+}
+
+.switcher input:checked + .switcher__round::before {
+  -webkit-transform: translate(25px, -50%);
+  -ms-transform: translate(25px, -50%);
+  transform: translate(25px, -50%);
+}
+
+.theme-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.theme-color__light {
+  fill: #ffab9b;
+}
+
+.theme-color__dark {
+  fill: #acc7f3;
 }
 
 .intro {
@@ -977,6 +1155,9 @@ main {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
+  -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
 }
 
 .advantages__container {
@@ -1016,6 +1197,9 @@ main {
   background-color: #f9fbfd;
   padding: 30px 30px 50px 30px;
   min-height: 241px;
+  -webkit-transition: background-color 0.6s ease, color 0.3s ease;
+  -o-transition: background-color 0.6s ease, color 0.3s ease;
+  transition: background-color 0.6s ease, color 0.3s ease;
 }
 
 .advantages__item h3 {
@@ -1042,6 +1226,10 @@ main {
 .advantages__item svg {
   width: 100%;
   height: 100%;
+  fill: #011C40;
+  -webkit-transition: fill 0.6s ease;
+  -o-transition: fill 0.6s ease;
+  transition: fill 0.6s ease;
 }
 
 /* Отдельные стили для каждого пункта(блока преимуществ), чтобы попасть в Pixel perfect */
@@ -1249,6 +1437,9 @@ main {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .booking__container {
@@ -1376,6 +1567,9 @@ main {
   padding: 11px 50px 11px 16px;
   border: none;
   background-color: #f9fbfd;
+  -webkit-transition: background-color 0.6s ease, color 0.6s ease;
+  -o-transition: background-color 0.6s ease, color 0.6s ease;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 .callback__item input:active {
@@ -1431,6 +1625,9 @@ main {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   background-color: #f9fbfd;
+  -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
 }
 
 .approval label:active {
@@ -1570,6 +1767,9 @@ main {
 .footer {
   background-color: #011c40;
   color: #f9fbfd;
+  -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
 }
 
 .footer__container {
@@ -1601,10 +1801,11 @@ main {
 
 .footer__nav .nav__list {
   margin: 0;
+  gap: 10px 35px;
 }
 
 .footer__nav .nav__item {
-  margin: -1px 35px 10px 0;
+  margin: -1px 0 0;
 }
 
 .footer__nav a {
@@ -1632,13 +1833,10 @@ main {
   -webkit-column-gap: 27px;
   -moz-column-gap: 27px;
   column-gap: 27px;
+  row-gap: 10px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: auto;
-}
-
-.social__item {
-  margin: 0 0 10px 0;
 }
 
 .social__item:last-child {
@@ -1692,6 +1890,12 @@ main {
 }
 
 @media (min-width: 1024px) {
+  .contact.dark-mode .contact__link:hover,
+  .contact.dark-mode .contact__link:focus {
+    color: #0d7aee;
+    letter-spacing: 0.3px;
+  }
+
   .header__nav a::after {
     content: "";
     display: block;
@@ -1881,15 +2085,12 @@ main {
   }
 
   .contact__text {
-    max-width: 324px;
+    max-width: none;
+    width: 100%;
   }
 
   .contact__item {
     margin-bottom: 16px;
-  }
-
-  .footer__nav .nav__list {
-    display: block;
   }
 }
 
@@ -1908,6 +2109,7 @@ main {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    row-gap: 15px;
   }
 
   .social__item:last-child {
@@ -2026,13 +2228,47 @@ main {
   }
 
   .logo {
-    margin: 0 25px 15px 0;
+    margin: 0 25px 0 0;
     width: 38px;
     height: 20px;
   }
 
+  .nav__list {
+    gap: 10px 24px;
+  }
+
   .nav__item {
-    margin: -4px 24px 10px 0;
+    margin: -4px 0 0;
+  }
+
+  .switcher label {
+    width: 40px;
+    height: 20px;
+  }
+
+  .switcher__round::before {
+    height: 10px;
+    width: 10px;
+  }
+
+  .switcher input:checked + .switcher__round::before {
+    -webkit-transform: translate(20px, -50%);
+    -ms-transform: translate(20px, -50%);
+    transform: translate(20px, -50%);
+  }
+
+  .theme-color {
+    gap: 2px;
+  }
+
+  .theme-color__light {
+    width: 20px;
+    height: 20px;
+  }
+
+  .theme-color__dark {
+    width: 20px;
+    height: 20px;
   }
 
   .intro {
@@ -2225,8 +2461,12 @@ main {
     padding: 50px 45px;
   }
 
+  .footer__nav .nav__list {
+    gap: 6px 15px;
+  }
+
   .footer__nav .nav__item {
-    margin: -10px 15px 6px 0;
+    margin: -10px 0 0;
   }
 
   .footer__nav a {
@@ -2237,7 +2477,7 @@ main {
   }
 
   .social__item {
-    margin: 0 -2px 15px;
+    margin: 0 -2px 0;
   }
 
   .social__link--facebook {
@@ -2262,12 +2502,47 @@ main {
     padding: 65px 15px;
   }
 
+  .header.dark-mode .header__nav {
+    background-color: #1D1F20;
+  }
+
+  .header.dark-mode .header__nav.is-open.header__nav::before {
+    background-color: #1D1F20;
+  }
+
+  .header.dark-mode .burger__menu.is-open.burger__menu::before,
+  .header.dark-mode .burger__menu.is-open.burger__menu::after {
+    background-color: #ffffff;
+  }
+
+  .header.dark-mode .header__logo.is-open .logo__icon {
+    fill: #ffffff;
+  }
+
+  .header.dark-mode.no-js .logo__icon {
+    fill: #ffffff;
+  }
+
+  .header.dark-mode .header__nav a {
+    color: #ffffff;
+  }
+
+  .header.dark-mode .header__nav a:active {
+    color: red;
+  }
+
   .header {
     top: 15px;
   }
 
   .header__container {
     padding: 0 15px;
+  }
+
+  .header__left-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .header.no-js {
@@ -2278,6 +2553,10 @@ main {
   .header.no-js .header__container {
     display: block;
     text-align: center;
+  }
+
+  .header.no-js .header__left-block {
+    display: block;
   }
 
   .header.no-js .header__logo {
@@ -2322,9 +2601,13 @@ main {
     margin-bottom: 0;
   }
 
+  .header__logo.logo {
+    margin: 0 15px 0 0;
+  }
+
   .header__logo.is-open {
     position: relative;
-    left: 14%;
+    left: 27%;
     z-index: 8;
   }
 
@@ -2384,11 +2667,44 @@ main {
     display: block;
     margin-top: 75px;
     margin-left: 15px;
+    gap: 0;
   }
 
   .nav__item {
     margin: 0 0 10px 0;
     max-width: 240px;
+  }
+
+  .switcher label {
+    width: 40px;
+    height: 20px;
+  }
+
+  .switcher__round::before {
+    height: 12px;
+    width: 12px;
+  }
+
+  .switcher input:checked + .switcher__round::before {
+    -webkit-transform: translate(20px, -50%);
+    -ms-transform: translate(20px, -50%);
+    transform: translate(20px, -50%);
+  }
+
+  .theme-color {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .theme-color__light {
+    width: 20px;
+    height: 20px;
+  }
+
+  .theme-color__dark {
+    width: 20px;
+    height: 20px;
   }
 
   .intro {
@@ -2566,12 +2882,18 @@ main {
     margin-top: -8px;
   }
 
+  .callback {
+    width: 100%;
+    max-width: none;
+  }
+
   .approval {
     margin-bottom: 23px;
   }
 
   .contact__map {
-    max-width: 290px;
+    max-width: none;
+    width: 100%;
     height: 316px;
   }
 
@@ -2594,6 +2916,10 @@ main {
 
   .footer__nav {
     margin: 2px 0 23px;
+  }
+
+  .footer__nav .nav__list {
+    display: block;
   }
 
   .footer__nav .nav__item {
