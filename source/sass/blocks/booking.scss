@@ -5,6 +5,8 @@
   background-position: 0 0;
   background-size: cover;
 
+  transition: color $trans-default;
+
   @include retina {
     background-image: url("../img/background/booking-background@2x.jpg");
   }

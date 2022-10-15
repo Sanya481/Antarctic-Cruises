@@ -2,6 +2,7 @@
   "name": "Liga-A-start-template",
   "version": "2.0.0",
   "description": "Стартовый шаблон сборки Лиги А",
+  "homepage": "https://Sanya481.github.io/Antarctic-Cruises",
   "browserslist": [
     "last 3 versions",
     "IE 11",
@@ -14,7 +15,9 @@
     "build": "cross-env NODE_ENV=production gulp build & gulp imagemin",
     "start": "cross-env NODE_ENV=development gulp start",
     "webp": "gulp webp",
-    "imagemin": "gulp imagemin"
+    "imagemin": "gulp imagemin",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "editorconfig-cli": [
     "*.json",

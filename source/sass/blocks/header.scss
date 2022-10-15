@@ -31,6 +31,15 @@
   }
 }
 
+.header__left-block {
+  display: flex;
+  align-items: center;
+
+  @include mobile-version-range {
+    display: flex;
+  }
+}
+
 /* Реализация шапки без JS. Стилизация с помощью добавления класса "no-js" тегу header */
 
 @include mobile-version-range {
@@ -44,6 +53,9 @@
     text-align: center;
   }
 
+  .header.no-js .header__left-block {
+    display: block;
+  }
 
   .header.no-js .header__logo {
     position: static;
@@ -83,10 +95,16 @@
   }
 }
 
+.header__logo.logo {
+  @include mobile-version-range {
+    margin: 0 15px 0 0;
+  }
+}
+
 .header__logo.is-open {
   @include mobile-version-range {
     position: relative;
-    left: 14%;
+    left: 27%;
     z-index: 8;
   }
 }

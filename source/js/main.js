@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import './menu-burger.js';
 import './card-rotation.js';
+import './dark-mode.js';
 
 // ---------------------------------
 

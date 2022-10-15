@@ -65,18 +65,3 @@ main {
   /* stylelint-disable-next-line */
   transition: none !important;
 }
-
-.page-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  position: relative;
-}
-
-.page-body.shadow::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 43, 102, 0.5);
-}

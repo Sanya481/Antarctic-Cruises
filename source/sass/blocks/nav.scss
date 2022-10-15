@@ -6,24 +6,30 @@
 
   display: flex;
   flex-wrap: wrap;
+  gap: 15px 34px;
+
+  @include tablet-version-range {
+    gap: 10px 24px;
+  }
 
   @include mobile-version-range {
     display: block;
     margin-top: 75px;
     margin-left: 15px;
+    gap: 0;
   }
 }
 
 .nav__item {
-  margin: 0 34px 15px 0;
+  // margin: 0 34px 15px 0;
 
   @include tablet-version-range {
-    margin: -4px 24px 10px 0;
+    margin: -4px 0 0;
   }
 
-  &:last-child {
-    margin-right: 0;
-  }
+  // &:last-child {
+  //   margin-right: 0;
+  // }
 
   @include mobile-version-range {
     margin: 0 0 10px 0;

@@ -5,6 +5,11 @@
   padding: 45px 50px 50px 50px;
   box-shadow: 0 4px 45px $color-tangaroa-opacity-2;
 
+  @include mobile-version-range {
+    width: 100%;
+    max-width: none;
+  }
+
   @include vp-320 {
     width: 290px;
     padding: 40px 30px;
@@ -97,6 +102,8 @@
   padding: 11px 50px 11px 16px;
   border: none;
   background-color: $color-alice-blue;
+
+  transition: background-color $trans-600, color $trans-600;
 
   @include effects-off {
     &:hover,

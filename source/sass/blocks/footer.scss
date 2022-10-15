@@ -1,6 +1,8 @@
 .footer {
   background-color: $color-tangaroa;
   color: $color-alice-blue;
+
+  transition: background-color $trans-600;
 }
 
 .footer__container {
@@ -56,17 +58,22 @@
 
 .footer__nav .nav__list {
   margin: 0;
+  gap: 10px 35px;
 
-  @include vp-768 {
+  @include tablet-version-range {
+    gap: 6px 15px;
+  }
+
+  @include mobile-version-range {
     display: block;
   }
 }
 
 .footer__nav .nav__item {
-  margin: -1px 35px 10px 0;
+  margin: -1px 0 0;
 
   @include tablet-version-range {
-    margin: -10px 15px 6px 0;
+    margin: -10px 0 0;
   }
 
   @include mobile-version-range {
