@@ -129,7 +129,7 @@
 .advantages__item svg {
   width: 100%;
   height: 100%;
-  fill: #011C40;
+  fill: $color-tangaroa;
   transition: fill $trans-600;
 }
 
@@ -253,4 +253,63 @@
     height: 13px;
     margin-bottom: 26px;
   }
+}
+
+/* Dark mode */
+.advantages.dark-mode {
+  background-color: $color-midnight;
+}
+
+.advantages.dark-mode h2 {
+  color: $body-azure;
+}
+
+.advantages.dark-mode .advantages__item {
+  background-color: $body-black-pearl;
+  color: $body-azure;
+}
+
+/* Добавляем тень к каждому элементу преимуществ */
+.advantages.dark-mode .advantages__item--cruise-ship {
+  box-shadow:
+    rgba(46, 186, 240, 0.4) -5px 5px,
+    rgba(46, 231, 240, 0.3) -10px 10px,
+    rgba(46, 240, 222, 0.2) -15px 15px,
+    rgba(46, 240, 150, 0.1) -20px 20px,
+    rgba(46, 240, 186, 0.05) -25px 25px;
+
+    @include vp-768 {
+      box-shadow: none;
+    }
+}
+
+.advantages.dark-mode .advantages__item--all-inclusive {
+  box-shadow:
+    rgba(240, 46, 170, 0.4) 0 5px,
+    rgba(240, 46, 170, 0.3) 0 10px,
+    rgba(240, 46, 170, 0.2) 0 15px,
+    rgba(240, 46, 170, 0.1) 0 20px,
+    rgba(240, 46, 170, 0.05) 0 25px;
+
+    @include vp-768 {
+      box-shadow: none;
+    }
+}
+
+.advantages.dark-mode .advantages__item--zodiac-excursions {
+  box-shadow:
+    rgba(46, 97, 240, 0.4) 5px 5px,
+    rgba(46, 222, 240, 0.3) 10px 10px,
+    rgba(46, 177, 240, 0.2) 15px 15px,
+    rgba(46, 240, 222, 0.1) 20px 20px,
+    rgba(46, 97, 240, 0.05) 25px 25px;
+
+    @include vp-768 {
+      box-shadow: none;
+    }
+}
+
+
+.advantages.dark-mode svg {
+  fill: $body-azure;
 }

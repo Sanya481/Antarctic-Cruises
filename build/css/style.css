@@ -686,99 +686,8 @@ main {
 }
 
 .page-body.dark-mode {
-  background-color: #1D1F20;
-  color: #EFFEFF;
-}
-
-/* Фон header */
-
-/* Подложка у header */
-
-/* Крестик */
-
-/* Лого */
-
-/* Ссылки навигации */
-
-.advantages.dark-mode {
-  background-color: #2D3843;
-}
-
-.advantages.dark-mode h2 {
-  color: #EFFEFF;
-}
-
-.advantages.dark-mode .advantages__item {
-  background-color: #1D1F20;
-  color: #EFFEFF;
-}
-
-.advantages.dark-mode svg {
-  fill: #EFFEFF;
-}
-
-.booking.dark-mode {
-  color: #001332;
-}
-
-.callback.dark-mode input {
-  background-color: #1D1F20;
-  color: #EFFEFF;
-}
-
-.callback.dark-mode input::-webkit-input-placeholder {
-  color: #a9a7a3;
-}
-
-.callback.dark-mode input::-moz-placeholder {
-  color: #a9a7a3;
-}
-
-.callback.dark-mode input:-ms-input-placeholder {
-  color: #a9a7a3;
-}
-
-.callback.dark-mode input::-ms-input-placeholder {
-  color: #a9a7a3;
-}
-
-.callback.dark-mode input::placeholder {
-  color: #a9a7a3;
-}
-
-.callback.dark-mode button {
-  background-color: #1D1F20;
-  color: #EFFEFF;
-}
-
-.approval.dark-mode label::before {
-  background-color: #1D1F20;
-}
-
-.approval.dark-mode input:checked + label::after {
-  background-image: url("../img/svg/check-mark-modal-white.svg");
-}
-
-.contact.dark-mode .contact__link {
-  color: #EFFEFF;
-}
-
-.contact.dark-mode .contact__link:active {
-  color: #1b0dee;
-}
-
-.contact.dark-mode .contact__link--address::before {
-  background-image: url("../img/svg/address-marker-white.svg");
-  background-repeat: no-repeat;
-}
-
-.contact.dark-mode .contact__link--phone::before {
-  background-image: url("../img/svg/phone-icon-white.svg");
-  background-repeat: no-repeat;
-}
-
-.footer.dark-mode {
-  background-color: #182346;
+  background-color: #1d1f20;
+  color: #effeff;
 }
 
 .header {
@@ -845,6 +754,18 @@ main {
 .header__nav a:active {
   color: #75dfff;
 }
+
+/* Dark mode */
+
+/* Фон header */
+
+/* Подложка у header */
+
+/* Крестик */
+
+/* Лого */
+
+/* Ссылки навигации */
 
 .burger {
   display: none;
@@ -994,9 +915,9 @@ main {
   -webkit-box-shadow: -5px -5px 8px rgba(255, 255, 255, 0.2), 5px 5px 8px rgba(0, 0, 0, 0.2);
   box-shadow: -5px -5px 8px rgba(255, 255, 255, 0.2), 5px 5px 8px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .switcher__round::before {
@@ -1004,16 +925,16 @@ main {
   position: absolute;
   height: 15px;
   width: 15px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 50px;
   left: 4px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .switcher input:checked + .switcher__round {
@@ -1053,6 +974,11 @@ main {
   background-size: cover;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  -webkit-transition: -webkit-box-shadow 0.8s ease-in-out;
+  transition: -webkit-box-shadow 0.8s ease-in-out;
+  -o-transition: box-shadow 0.8s ease-in-out;
+  transition: box-shadow 0.8s ease-in-out;
+  transition: box-shadow 0.8s ease-in-out, -webkit-box-shadow 0.8s ease-in-out;
 }
 
 .intro__container {
@@ -1091,6 +1017,13 @@ main {
   max-width: 900px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin: 0;
+}
+
+/* Dark-mode */
+
+.page-body.dark-mode .intro {
+  -webkit-box-shadow: inset 0 17px 17px #c8efff, 0 17px 17px #c8efff;
+  box-shadow: inset 0 17px 17px #c8efff, 0 17px 17px #c8efff;
 }
 
 .about__container {
@@ -1226,7 +1159,7 @@ main {
 .advantages__item svg {
   width: 100%;
   height: 100%;
-  fill: #011C40;
+  fill: #011c40;
   -webkit-transition: fill 0.6s ease;
   -o-transition: fill 0.6s ease;
   transition: fill 0.6s ease;
@@ -1273,6 +1206,42 @@ main {
   width: 42px;
   height: 15px;
   margin-bottom: 35px;
+}
+
+/* Dark mode */
+
+.advantages.dark-mode {
+  background-color: #2d3843;
+}
+
+.advantages.dark-mode h2 {
+  color: #effeff;
+}
+
+.advantages.dark-mode .advantages__item {
+  background-color: #1d1f20;
+  color: #effeff;
+}
+
+/* Добавляем тень к каждому элементу преимуществ */
+
+.advantages.dark-mode .advantages__item--cruise-ship {
+  -webkit-box-shadow: rgba(46, 186, 240, 0.4) -5px 5px, rgba(46, 231, 240, 0.3) -10px 10px, rgba(46, 240, 222, 0.2) -15px 15px, rgba(46, 240, 150, 0.1) -20px 20px, rgba(46, 240, 186, 0.05) -25px 25px;
+  box-shadow: rgba(46, 186, 240, 0.4) -5px 5px, rgba(46, 231, 240, 0.3) -10px 10px, rgba(46, 240, 222, 0.2) -15px 15px, rgba(46, 240, 150, 0.1) -20px 20px, rgba(46, 240, 186, 0.05) -25px 25px;
+}
+
+.advantages.dark-mode .advantages__item--all-inclusive {
+  -webkit-box-shadow: rgba(240, 46, 170, 0.4) 0 5px, rgba(240, 46, 170, 0.3) 0 10px, rgba(240, 46, 170, 0.2) 0 15px, rgba(240, 46, 170, 0.1) 0 20px, rgba(240, 46, 170, 0.05) 0 25px;
+  box-shadow: rgba(240, 46, 170, 0.4) 0 5px, rgba(240, 46, 170, 0.3) 0 10px, rgba(240, 46, 170, 0.2) 0 15px, rgba(240, 46, 170, 0.1) 0 20px, rgba(240, 46, 170, 0.05) 0 25px;
+}
+
+.advantages.dark-mode .advantages__item--zodiac-excursions {
+  -webkit-box-shadow: rgba(46, 97, 240, 0.4) 5px 5px, rgba(46, 222, 240, 0.3) 10px 10px, rgba(46, 177, 240, 0.2) 15px 15px, rgba(46, 240, 222, 0.1) 20px 20px, rgba(46, 97, 240, 0.05) 25px 25px;
+  box-shadow: rgba(46, 97, 240, 0.4) 5px 5px, rgba(46, 222, 240, 0.3) 10px 10px, rgba(46, 177, 240, 0.2) 15px 15px, rgba(46, 240, 222, 0.1) 20px 20px, rgba(46, 97, 240, 0.05) 25px 25px;
+}
+
+.advantages.dark-mode svg {
+  fill: #effeff;
 }
 
 .directions__container {
@@ -1416,11 +1385,11 @@ main {
   width: 100%;
   text-align: center;
   vertical-align: middle;
-  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease, -webkit-box-shadow 0.3s ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1429,6 +1398,7 @@ main {
 
 .card-back a:active {
   background-color: #0d7aee;
+  color: #ffffff;
 }
 
 .booking {
@@ -1489,6 +1459,12 @@ main {
   max-width: 380px;
 }
 
+/* Dark mode */
+
+.booking.dark-mode {
+  color: #011c40;
+}
+
 .callback {
   max-width: 403px;
   background-color: #011c40;
@@ -1524,11 +1500,11 @@ main {
   margin: 0;
   padding: 11px 40px 10px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease, border-radius 0.3s ease-in-out, color 0.3s ease, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease, border-radius 0.3s ease-in-out, color 0.3s ease, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease, border-radius 0.3s ease-in-out, color 0.3s ease;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease, border-radius 0.3s ease-in-out, color 0.3s ease;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease, border-radius 0.3s ease-in-out, color 0.3s ease, -webkit-box-shadow 0.3s ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1536,7 +1512,10 @@ main {
 }
 
 .callback__form button:active {
-  background-color: #0d7aee;
+  background-color: #05478c;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #ffffff;
 }
 
 .callback__form button:disabled {
@@ -1596,6 +1575,50 @@ main {
   color: rgba(1, 28, 64, 0.7);
 }
 
+/* Dark mode */
+
+.callback.dark-mode input {
+  background-color: #1d1f20;
+  color: #effeff;
+}
+
+.callback.dark-mode input::-webkit-input-placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode input::-moz-placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode input:-ms-input-placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode input::-ms-input-placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode input::placeholder {
+  color: #a9a7a3;
+}
+
+.callback.dark-mode button {
+  background-color: #5e4a4a;
+  color: #effeff;
+}
+
+.callback.dark-mode button:active {
+  background-color: #05478c;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.callback.dark-mode button:disabled {
+  cursor: auto;
+  background-color: #686868;
+  color: #000000;
+}
+
 .approval {
   margin-bottom: 23px;
 }
@@ -1647,6 +1670,16 @@ main {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+/* Dark mode */
+
+.approval.dark-mode label::before {
+  background-color: #362f2f;
+}
+
+.approval.dark-mode input:checked + label::after {
+  background-image: url("../img/svg/check-mark-modal-white.svg");
 }
 
 .contact__container {
@@ -1764,6 +1797,26 @@ main {
   color: #1b0dee;
 }
 
+/* Dark mode */
+
+.contact.dark-mode .contact__link {
+  color: #effeff;
+}
+
+.contact.dark-mode .contact__link:active {
+  color: #00e7ff;
+}
+
+.contact.dark-mode .contact__link--address::before {
+  background-image: url("../img/svg/address-marker-white.svg");
+  background-repeat: no-repeat;
+}
+
+.contact.dark-mode .contact__link--phone::before {
+  background-image: url("../img/svg/phone-icon-white.svg");
+  background-repeat: no-repeat;
+}
+
 .footer {
   background-color: #011c40;
   color: #f9fbfd;
@@ -1789,14 +1842,14 @@ main {
 
 /* Основные стили по стилизации в файле logo.scss */
 
-.footer__logo .logo__icon:active {
+.footer__logo:active .logo__icon {
   fill: #0d7aee;
 }
 
 /* ============ footer__nav */
 
 .footer__nav {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .footer__nav .nav__list {
@@ -1816,6 +1869,16 @@ main {
 
 .footer__nav a:active {
   color: #75dfff;
+}
+
+/* Dark mode */
+
+.footer.dark-mode {
+  background-image: url("../img/background/starry-sky.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-color: #182346;
 }
 
 .social {
@@ -1849,18 +1912,21 @@ main {
 }
 
 .social__link--facebook {
-  width: 11px;
-  height: 20px;
+  width: 21px;
+  height: 30px;
+  padding: 5px;
 }
 
 .social__link--instagram {
-  width: 21px;
-  height: 20px;
+  width: 31px;
+  height: 30px;
+  padding: 5px;
 }
 
 .social__link--twitter {
-  width: 20px;
-  height: 17px;
+  width: 30px;
+  height: 27px;
+  padding: 5px;
 }
 
 /* Иконке задаем 100% ширины и высоты, чтобы не загружать разные размеры под разные устройства, а ссылке в которую обернута svg - фактические размеры иконки */
@@ -1869,9 +1935,14 @@ main {
   width: 100%;
   height: 100%;
   fill: #f9fbfd;
+  -webkit-transition: fill 0.3s ease, -webkit-transform 0.6s ease;
+  transition: fill 0.3s ease, -webkit-transform 0.6s ease;
+  -o-transition: fill 0.3s ease, transform 0.6s ease;
+  transition: fill 0.3s ease, transform 0.6s ease;
+  transition: fill 0.3s ease, transform 0.6s ease, -webkit-transform 0.6s ease;
 }
 
-.social__icon:active {
+.social__link:active .social__icon {
   fill: #2e80fd;
 }
 
@@ -1890,12 +1961,6 @@ main {
 }
 
 @media (min-width: 1024px) {
-  .contact.dark-mode .contact__link:hover,
-  .contact.dark-mode .contact__link:focus {
-    color: #0d7aee;
-    letter-spacing: 0.3px;
-  }
-
   .header__nav a::after {
     content: "";
     display: block;
@@ -1942,6 +2007,7 @@ main {
   .callback__form button:focus {
     -webkit-box-shadow: 0 0 40px 40px #75dfff inset;
     box-shadow: 0 0 40px 40px #75dfff inset;
+    border-radius: 20px;
   }
 
   .callback__form button:disabled {
@@ -1965,12 +2031,22 @@ main {
     letter-spacing: 0.3px;
   }
 
-  .footer__logo .logo__icon:hover,
-  .footer__logo .logo__icon:focus {
+  .contact.dark-mode .contact__link:hover,
+  .contact.dark-mode .contact__link:focus {
+    color: #00cbff;
+    letter-spacing: 0.4px;
+  }
+
+  .contact.dark-mode .contact__link:active {
+    color: #00e7ff;
+  }
+
+  .footer__logo:hover .logo__icon,
+  .footer__logo:focus .logo__icon {
     fill: #00e7ff;
   }
 
-  .footer__logo .logo__icon:active {
+  .footer__logo:active .logo__icon {
     fill: #0d7aee;
   }
 
@@ -1982,7 +2058,7 @@ main {
     bottom: -3px;
     width: 0;
     height: 2px;
-    background-color: #9ab3ff;
+    background-color: #9aceff;
     -webkit-transition: width 0.6s ease;
     -o-transition: width 0.6s ease;
     transition: width 0.6s ease;
@@ -1993,15 +2069,32 @@ main {
     content: "";
     width: 100%;
     left: 0;
-    background-color: #ffffff;
+    background-color: #e11a5e;
   }
 
-  .social__icon:hover,
-  .social__icon:focus {
-    fill: #00acee;
+  .social__link:hover .social__icon,
+  .social__link:focus .social__icon {
+    -webkit-transform: rotate(360deg) scale(1.3);
+    -ms-transform: rotate(360deg) scale(1.3);
+    transform: rotate(360deg) scale(1.3);
   }
 
-  .social__icon:active {
+  .social__link--facebook:hover .social__icon,
+  .social__link--facebook:focus .social__icon {
+    fill: #d100ff;
+  }
+
+  .social__link--instagram:hover .social__icon,
+  .social__link--instagram:focus .social__icon {
+    fill: #ff2525;
+  }
+
+  .social__link--twitter:hover .social__icon,
+  .social__link--twitter:focus .social__icon {
+    fill: #00cbff;
+  }
+
+  .social__link:active .social__icon {
     fill: #2e80fd;
   }
 }
@@ -2047,6 +2140,21 @@ main {
   .advantages {
     min-height: 588px;
     background-image: url("../img/background/advantages-background-tablet.png");
+  }
+
+  .advantages.dark-mode .advantages__item--cruise-ship {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .advantages.dark-mode .advantages__item--all-inclusive {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .advantages.dark-mode .advantages__item--zodiac-excursions {
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 
   .booking {
@@ -2463,7 +2571,7 @@ main {
   }
 
   .footer__nav a {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 15px;
     padding: 10px 10px 10px 0;
     color: #f9fbfd;
@@ -2474,18 +2582,18 @@ main {
   }
 
   .social__link--facebook {
-    width: 9px;
-    height: 16px;
+    width: 19px;
+    height: 26px;
   }
 
   .social__link--instagram {
-    width: 16px;
-    height: 16px;
+    width: 26px;
+    height: 26px;
   }
 
   .social__link--twitter {
-    width: 16px;
-    height: 13px;
+    width: 26px;
+    height: 23px;
   }
 }
 
@@ -2493,35 +2601,6 @@ main {
   .container {
     max-width: 767px;
     padding: 65px 15px;
-  }
-
-  .header.dark-mode .header__nav {
-    background-color: #1D1F20;
-  }
-
-  .header.dark-mode .header__nav.is-open.header__nav::before {
-    background-color: #1D1F20;
-  }
-
-  .header.dark-mode .burger__menu.is-open.burger__menu::before,
-  .header.dark-mode .burger__menu.is-open.burger__menu::after {
-    background-color: #ffffff;
-  }
-
-  .header.dark-mode .header__logo.is-open .logo__icon {
-    fill: #ffffff;
-  }
-
-  .header.dark-mode.no-js .logo__icon {
-    fill: #ffffff;
-  }
-
-  .header.dark-mode .header__nav a {
-    color: #ffffff;
-  }
-
-  .header.dark-mode .header__nav a:active {
-    color: red;
   }
 
   .header {
@@ -2630,6 +2709,35 @@ main {
   .header__nav a {
     color: #011c40;
     padding: 10px;
+  }
+
+  .header.dark-mode .header__nav {
+    background-color: #1d1f20;
+  }
+
+  .header.dark-mode .header__nav.is-open.header__nav::before {
+    background-color: #1d1f20;
+  }
+
+  .header.dark-mode .burger__menu.is-open.burger__menu::before,
+  .header.dark-mode .burger__menu.is-open.burger__menu::after {
+    background-color: #ffffff;
+  }
+
+  .header.dark-mode .header__logo.is-open .logo__icon {
+    fill: #ffffff;
+  }
+
+  .header.dark-mode.no-js .logo__icon {
+    fill: #ffffff;
+  }
+
+  .header.dark-mode .header__nav a {
+    color: #ffffff;
+  }
+
+  .header.dark-mode .header__nav a:active {
+    color: #ff1553;
   }
 
   .burger {
@@ -2924,7 +3032,7 @@ main {
   }
 
   .footer__nav a {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 15px;
     padding: 10px 10px 10px 0;
     color: #f9fbfd;
@@ -2944,18 +3052,18 @@ main {
   }
 
   .social__link--facebook {
-    width: 9px;
-    height: 16px;
+    width: 22px;
+    height: 29px;
   }
 
   .social__link--instagram {
-    width: 16px;
-    height: 16px;
+    width: 29px;
+    height: 29px;
   }
 
   .social__link--twitter {
-    width: 16px;
-    height: 13px;
+    width: 29px;
+    height: 26px;
   }
 }
 

@@ -153,3 +153,34 @@
     color: $color-blue;
   }
 }
+
+/* Dark mode */
+.contact.dark-mode .contact__link {
+  color: $body-azure;
+
+  @include effects-off {
+    &:hover,
+    &:focus {
+      color: $color-deep-sky-blue;
+      letter-spacing: 0.4px;
+    }
+
+    &:active {
+      color: $color-aqua;
+    }
+  }
+
+  &:active {
+    color: $color-aqua;
+  }
+}
+
+.contact.dark-mode .contact__link--address::before {
+  background-image: url("../img/svg/address-marker-white.svg");
+  background-repeat: no-repeat;
+}
+
+.contact.dark-mode .contact__link--phone::before {
+  background-image: url("../img/svg/phone-icon-white.svg");
+  background-repeat: no-repeat;
+}

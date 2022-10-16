@@ -32,24 +32,24 @@
 }
 
 @include effects-off {
-  .footer__logo .logo__icon:hover,
-  .footer__logo .logo__icon:focus {
+  .footer__logo:hover .logo__icon,
+  .footer__logo:focus .logo__icon {
     fill: $color-aqua;
   }
 
-  .footer__logo .logo__icon:active {
+  .footer__logo:active .logo__icon {
     fill: $color-dodger-blue;
   }
 }
 
-.footer__logo .logo__icon:active {
+.footer__logo:active .logo__icon {
   fill: $color-dodger-blue;
 }
 
 /* ============ footer__nav */
 
 .footer__nav {
-  margin-right: 20px;
+  margin-right: 10px;
 
   @include mobile-version-range {
     margin: 2px 0 23px;
@@ -99,7 +99,7 @@
       bottom: -3px;
       width: 0;
       height: 2px;
-      background-color: $color-perano;
+      background-color: $color-columbia-blue;
       transition: width $trans-600;
     }
 
@@ -108,7 +108,7 @@
       content: "";
       width: 100%;
       left: 0;
-      background-color: $color-default-white;
+      background-color: $body-ruby;
     }
   }
 
@@ -117,16 +117,25 @@
   }
 
   @include tablet-version-range {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 15px;
     padding: 10px 10px 10px 0;
     color: $color-alice-blue;
   }
 
   @include mobile-version-range {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 15px;
     padding: 10px 10px 10px 0;
     color: $color-alice-blue;
   }
+}
+
+/* Dark mode */
+.footer.dark-mode {
+  background-image: url("../img/background/starry-sky.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-color: $color-midnight-express;
 }
