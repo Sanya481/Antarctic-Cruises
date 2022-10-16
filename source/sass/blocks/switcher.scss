@@ -40,19 +40,19 @@
     5px 5px 8px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
 
-  transition: .5s;
+  transition: 0.5s;
 
   &::before {
     content: "";
     position: absolute;
     height: 15px;
     width: 15px;
-    background: #fff;
+    background: $color-default-white;
     border-radius: 50px;
     left: 4px;
     top: 50%;
     transform: translateY(-50%);
-    transition: .5s;
+    transition: 0.5s;
 
     @include tablet-version-range {
       height: 10px;
@@ -66,11 +66,11 @@
   }
 }
 
-.switcher input:checked+.switcher__round {
+.switcher input:checked + .switcher__round {
   background-color: #221515;
 }
 
-.switcher input:checked+.switcher__round::before {
+.switcher input:checked + .switcher__round::before {
   transform: translate(25px, -50%);
 
   @include tablet-version-range {

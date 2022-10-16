@@ -18,7 +18,20 @@ $color-aqua:                        #00e7ff;
 $color-dodger-blue:                 #37a1ff;
 $color-blue:                        #1b0dee;
 $body-shadow:                       rgba(0, 43, 102, 0.5);
-
+$body-black-pearl:                  #1d1f20;
+$body-azure:                        #effeff;
+$color-midnight:                    #2d3843;
+$color-midnight-express:            #182346;
+$color-cloudy:                      #a9a7a3;
+$color-psychedelic-purple:          #d100ff;
+$color-red-orange:                  #ff2525;
+$color-deep-sky-blue:               #00cbff;
+$color-woody-brown:                 #5e4a4a;
+$color-columbia-blue:               #9aceff;
+$body-ruby:                         #e11a5e;
+$body-night-rider:                  #362f2f;
+$body-dim-gray:                     #686868;
+$body-dark-cerulean:                #05478c;
 
 // Background
 // ----------------------------------
@@ -55,16 +68,20 @@ $ff-placeholder:                    "Montserrat", "Arial", sans-serif;
 // Animation
 // ---------------------------------
 
+$tf-cubic:                          cubic-bezier(0.68, 0.07, 0.85, 0.44);
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
+$tf-default-1:                      ease-in-out;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-callback:                    0.6s cubic-bezier(0.55, 0, 0.1, 1);
 $trans-header-burger:               300ms cubic-bezier(0.23, 1, 0.32, 1);
 $trans-header-burger-2:             300ms cubic-bezier(0.68, -0.55, 0, 1.55);
 
+$trans-600-cubic:                   0.3s $tf-default-1;
 $trans-600:                         0.6s $tf-default;
 $trans-800:                         0.8s $tf-default;
+$trans-800-2:                       0.8s $tf-default-1;
 
 // Viewports
 // ---------------------------------

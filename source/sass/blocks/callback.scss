@@ -57,13 +57,18 @@
   margin: 0;
   padding: 11px 40px 10px;
   cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition:
+    box-shadow $trans-600-cubic,
+    background-color $trans-default,
+    border-radius $trans-600-cubic,
+    color $trans-default;
   user-select: none;
 
   @include effects-off {
     &:hover,
     &:focus {
       box-shadow: 0 0 40px 40px $color-turquoise-blue inset;
+      border-radius: 20px;
     }
 
     &:disabled {
@@ -73,7 +78,9 @@
   }
 
   &:active {
-    background-color: $color-dodger-blue;
+    background-color: $body-dark-cerulean;
+    box-shadow: none;
+    color: $color-default-white;
   }
 
   &:disabled {
@@ -119,4 +126,31 @@
 
 .callback__item input::placeholder {
   color: $color-tangaroa-opacity;
+}
+
+
+/* Dark mode */
+.callback.dark-mode input {
+  background-color: $body-black-pearl;
+  color: $body-azure;
+}
+
+.callback.dark-mode input::placeholder {
+  color: $color-cloudy;
+}
+
+.callback.dark-mode button {
+  background-color: $color-woody-brown;
+  color: $body-azure;
+
+  &:active {
+    background-color: $body-dark-cerulean;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    cursor: auto;
+    background-color: $body-dim-gray;
+    color: $color-default-black;
+  }
 }

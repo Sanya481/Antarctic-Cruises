@@ -77,3 +77,12 @@
     color: $color-turquoise-blue;
   }
 }
+
+/* Dark mode */
+.approval.dark-mode label::before {
+  background-color: $body-night-rider;
+}
+
+.approval.dark-mode input:checked + label::after {
+  background-image: url("../img/svg/check-mark-modal-white.svg");
+}

@@ -196,3 +196,51 @@
     padding: 10px;
   }
 }
+
+/* Dark mode */
+
+/* Фон header */
+.header.dark-mode .header__nav {
+  @include mobile-version-range {
+    background-color: $body-black-pearl;
+  }
+}
+
+/* Подложка у header */
+.header.dark-mode .header__nav.is-open.header__nav::before {
+  @include mobile-version-range {
+    background-color: $body-black-pearl;
+  }
+}
+
+/* Крестик */
+.header.dark-mode .burger__menu.is-open.burger__menu::before,
+.header.dark-mode .burger__menu.is-open.burger__menu::after {
+  @include mobile-version-range {
+    background-color: $color-default-white;
+  }
+}
+
+/* Лого */
+.header.dark-mode .header__logo.is-open .logo__icon {
+  @include mobile-version-range {
+    fill: $color-default-white;
+  }
+}
+
+.header.dark-mode.no-js .logo__icon {
+  @include mobile-version-range {
+    fill: $color-default-white;
+  }
+}
+
+/* Ссылки навигации */
+.header.dark-mode .header__nav a {
+  @include mobile-version-range {
+    color: $color-default-white;
+
+    &:active {
+      color: $color-torch-red;
+    }
+  }
+}

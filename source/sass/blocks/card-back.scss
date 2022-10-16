@@ -100,7 +100,10 @@
   width: 100%;
   text-align: center;
   vertical-align: middle;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition:
+    box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    color $trans-default;
   user-select: none;
 
   @include effects-off {
@@ -112,5 +115,6 @@
 
   &:active {
     background-color: $color-dodger-blue;
+    color: $color-default-white;
   }
 }

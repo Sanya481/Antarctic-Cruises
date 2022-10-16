@@ -7,6 +7,8 @@
   background-size: cover;
   filter: $intro-filter-bcg;
 
+  transition: box-shadow $trans-800-2;
+
   @include retina {
     background-image: url("../img/background/intro-background@2x.jpg");
   }
@@ -102,4 +104,12 @@
     font-size: 16px;
     max-width: 210px;
   }
+}
+
+/* Dark-mode */
+
+.page-body.dark-mode .intro {
+  box-shadow:
+    inset 0 17px 17px #c8efff,
+    0 17px 17px #c8efff;
 }

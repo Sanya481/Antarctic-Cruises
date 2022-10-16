@@ -12,8 +12,9 @@
   flex-wrap: wrap;
   margin-left: auto;
 
-  @include vp-600 {
-    justify-content: center;
+  @include mobile-version-range {
+    display: flex;
+    flex-wrap: wrap;
     row-gap: 15px;
   }
 
@@ -51,47 +52,50 @@
   vertical-align: middle;
 
   &--facebook {
-    width: 11px;
-    height: 20px;
+    width: 21px;
+    height: 30px;
+    padding: 5px;
 
     @include tablet-version-range {
-      width: 9px;
-      height: 16px;
+      width: 19px;
+      height: 26px;
     }
 
     @include mobile-version-range {
-      width: 9px;
-      height: 16px;
+      width: 22px;
+      height: 29px;
     }
   }
 
   &--instagram {
-    width: 21px;
-    height: 20px;
+    width: 31px;
+    height: 30px;
+    padding: 5px;
 
     @include tablet-version-range {
-      width: 16px;
-      height: 16px;
+      width: 26px;
+      height: 26px;
     }
 
     @include mobile-version-range {
-      width: 16px;
-      height: 16px;
+      width: 29px;
+      height: 29px;
     }
   }
 
   &--twitter {
-    width: 20px;
-    height: 17px;
+    width: 30px;
+    height: 27px;
+    padding: 5px;
 
     @include tablet-version-range {
-      width: 16px;
-      height: 13px;
+      width: 26px;
+      height: 23px;
     }
 
     @include mobile-version-range {
-      width: 16px;
-      height: 13px;
+      width: 29px;
+      height: 26px;
     }
   }
 }
@@ -101,19 +105,35 @@
   width: 100%;
   height: 100%;
   fill: $color-alice-blue;
+  transition: fill $trans-default, transform $trans-600;
+}
 
-  @include effects-off {
-    &:hover,
-    &:focus {
-      fill: $deep-sky-blue;
-    }
-
-    &:active {
-      fill: $deep-dodger-blue;
-    }
+@include effects-off {
+  .social__link:hover .social__icon,
+  .social__link:focus .social__icon {
+    transform: rotate(360deg) scale(1.3);
   }
 
-  &:active {
+  .social__link--facebook:hover .social__icon,
+  .social__link--facebook:focus .social__icon {
+    fill: $color-psychedelic-purple;
+  }
+
+  .social__link--instagram:hover .social__icon,
+  .social__link--instagram:focus .social__icon {
+    fill: $color-red-orange;
+  }
+
+  .social__link--twitter:hover .social__icon,
+  .social__link--twitter:focus .social__icon {
+    fill: $color-deep-sky-blue;
+  }
+
+  .social__link:active .social__icon {
     fill: $deep-dodger-blue;
   }
+}
+
+.social__link:active .social__icon {
+  fill: $deep-dodger-blue;
 }
